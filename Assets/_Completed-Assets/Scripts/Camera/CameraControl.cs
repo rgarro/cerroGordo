@@ -1,132 +1,161 @@
 ﻿using UnityEngine;
+using System.Collections.Generic;
 
-namespace Complete
+
+public class CameraControl : MonoBehaviour
 {
-    public class CameraControl : MonoBehaviour
+    static public CameraControl sInstance;
+
+    public float m_DampTime = 0.2f;                   // Approximate time for the camera to refocus.
+    public float m_ScreenEdgeBuffer = 4f;             // Space between the top/bottom most target and the screen edge (multiplied by aspect for left and right).
+    public float m_MinSize = 6.5f;                    // The smallest orthographic size the camera can be.
+
+    private Camera m_Camera;                        // Used for referencing the camera.
+    private float m_ZoomSpeed;                      // Reference speed for the smooth damping of the orthographic size.
+    private Vector3 m_MoveVelocity;                 // Reference velocity for the smooth damping of the position.
+    private float m_ConvertDistanceToSize;                 // Used to multiply by the offset of the rig to the furthest target.
+
+
+    private void Awake()
     {
-        public float m_DampTime = 0.2f;                 // Approximate time for the camera to refocus.
-        public float m_ScreenEdgeBuffer = 4f;           // Space between the top/bottom most target and the screen edge.
-        public float m_MinSize = 6.5f;                  // The smallest orthographic size the camera can be.
-        [HideInInspector] public Transform[] m_Targets; // All the targets the camera needs to encompass.
+        sInstance = this;
+        m_Camera = GetComponentInChildren<Camera>();
+    }
 
 
-        private Camera m_Camera;                        // Used for referencing the camera.
-        private float m_ZoomSpeed;                      // Reference speed for the smooth damping of the orthographic size.
-        private Vector3 m_MoveVelocity;                 // Reference velocity for the smooth damping of the position.
-        private Vector3 m_DesiredPosition;              // The position the camera is moving towards.
+    private void Start()
+    {
+        SetDistanceToSize();
+    }
 
 
-        private void Awake ()
+    private void SetDistanceToSize()
+    {
+        // If the camera's orthographic size will be affected by how much it is tilted more than by it's aspect ratio...
+        if (VisibleAreaWiderThanTall())
+            // ... then the ratio of distance to orthographic size is based on the camera's tilt.
+            m_ConvertDistanceToSize = Mathf.Sin(Mathf.Deg2Rad * transform.eulerAngles.x);
+        else
+            // Otherwise the ratio of distance to orthographic size is simply the aspect ratio.
+            m_ConvertDistanceToSize = 1f / m_Camera.aspect;
+    }
+
+
+    private bool VisibleAreaWiderThanTall()
+    {
+        // The project frustum is how the camera's frustum would appear on a flat horizontal plane.
+        // This variable is a measure of the projected frustum's height vs it's width.
+        float projectedFrustumRatio = Mathf.Sin(Mathf.Deg2Rad * transform.eulerAngles.x) * m_Camera.aspect;
+
+        // When the ratio is greater than 1 the projected frustum is taller than it is wide.
+        // This means the tilt of the camera is more important than it's aspect in calculating the orthographic size.
+        return projectedFrustumRatio > 1f;
+    }
+
+
+    private void FixedUpdate()
+    {
+        // The camera is moved towards a target position which is returned.
+        Vector3 targetPosition = Move();
+
+        // The size is changed based on where the camera is going to be.
+        Zoom(targetPosition);
+    }
+
+
+    private Vector3 Move()
+    {
+        // Find the average position of the targets and smoothly transition to that position.
+        Vector3 targetPosition = FindAveragePosition();
+        transform.position = Vector3.SmoothDamp(transform.position, targetPosition, ref m_MoveVelocity, m_DampTime);
+
+        return targetPosition;
+    }
+
+
+    private Vector3 FindAveragePosition()
+    {
+        Vector3 average = new Vector3();
+        int numTargets = 0;
+            
+        // Go through all the targets and add their positions together.
+        for (int i = 0; i < GameManager.m_Tanks.Count; i++)
         {
-            m_Camera = GetComponentInChildren<Camera> ();
+            // If the target isn't active, go on to the next one.
+            if (!GameManager.m_Tanks[i].m_Instance.activeSelf)
+                continue;
+
+            // Add to the average and increment the number of targets in the average.
+            average += GameManager.m_Tanks[i].m_Instance.transform.position;
+            numTargets++;
         }
 
+        // If there are targets divide the sum of the positions by the number of them to find the average.
+        if (numTargets > 0)
+            average /= numTargets;
 
-        private void FixedUpdate ()
+        // Keep the same y value.
+        average.y = transform.position.y;
+
+        return average;
+    }
+
+
+    private void Zoom(Vector3 desiredPosition)
+    {
+        // Find the required size based on the desired position
+        float targetSize = FindRequiredSize(desiredPosition);
+        m_Camera.orthographicSize = Mathf.SmoothDamp(m_Camera.orthographicSize, targetSize, ref m_ZoomSpeed,
+            m_DampTime);
+    }
+
+
+    private float FindRequiredSize(Vector3 desiredPosition)
+    {
+        // Find how far from the rig to the furthest target.
+        float targetDistance = MaxTargetDistance(desiredPosition);
+
+        // Calculate the size based on the previously found ratio and buffer.
+        float newSize = targetDistance * m_ConvertDistanceToSize + m_ScreenEdgeBuffer;
+
+        // Restrict the new size so that it's not smaller than the minimum size.
+        newSize = Mathf.Max(newSize, m_MinSize);
+
+        return newSize;
+    }
+
+
+    private float MaxTargetDistance(Vector3 desiredPosition)
+    {
+        // Default furthest distance is no distance at all.
+        float furthestDistance = 0f;
+
+        // Go through all the targets and if they are further away use that distance instead.
+        for (int i = 0; i < GameManager.m_Tanks.Count; i++)
         {
-            // Move the camera towards a desired position.
-            Move ();
+            // If the target isn't active, on to the next one.
+            if (!GameManager.m_Tanks[i].m_Instance.activeSelf)
+                continue;
 
-            // Change the size of the camera based.
-            Zoom ();
-        }
+            // Find the distance from the camera's desired position to the target.
+            float targetDistance = (desiredPosition - GameManager.m_Tanks[i].m_Instance.transform.position).magnitude;
 
-
-        private void Move ()
-        {
-            // Find the average position of the targets.
-            FindAveragePosition ();
-
-            // Smoothly transition to that position.
-            transform.position = Vector3.SmoothDamp(transform.position, m_DesiredPosition, ref m_MoveVelocity, m_DampTime);
-        }
-
-
-        private void FindAveragePosition ()
-        {
-            Vector3 averagePos = new Vector3 ();
-            int numTargets = 0;
-
-            // Go through all the targets and add their positions together.
-            for (int i = 0; i < m_Targets.Length; i++)
+            // If it's greater than the current furthest distance, it's the furthest distance.
+            if (targetDistance > furthestDistance)
             {
-                // If the target isn't active, go on to the next one.
-                if (!m_Targets[i].gameObject.activeSelf)
-                    continue;
-
-                // Add to the average and increment the number of targets in the average.
-                averagePos += m_Targets[i].position;
-                numTargets++;
+                furthestDistance = targetDistance;
             }
-
-            // If there are targets divide the sum of the positions by the number of them to find the average.
-            if (numTargets > 0)
-                averagePos /= numTargets;
-
-            // Keep the same y value.
-            averagePos.y = transform.position.y;
-
-            // The desired position is the average position;
-            m_DesiredPosition = averagePos;
         }
 
-
-        private void Zoom ()
-        {
-            // Find the required size based on the desired position and smoothly transition to that size.
-            float requiredSize = FindRequiredSize();
-            m_Camera.orthographicSize = Mathf.SmoothDamp (m_Camera.orthographicSize, requiredSize, ref m_ZoomSpeed, m_DampTime);
-        }
+        // Return the distance to the target that is furthest away.
+        return furthestDistance;
+    }
 
 
-        private float FindRequiredSize ()
-        {
-            // Find the position the camera rig is moving towards in its local space.
-            Vector3 desiredLocalPos = transform.InverseTransformPoint(m_DesiredPosition);
-
-            // Start the camera's size calculation at zero.
-            float size = 0f;
-
-            // Go through all the targets...
-            for (int i = 0; i < m_Targets.Length; i++)
-            {
-                // ... and if they aren't active continue on to the next target.
-                if (!m_Targets[i].gameObject.activeSelf)
-                    continue;
-
-                // Otherwise, find the position of the target in the camera's local space.
-                Vector3 targetLocalPos = transform.InverseTransformPoint(m_Targets[i].position);
-
-                // Find the position of the target from the desired position of the camera's local space.
-                Vector3 desiredPosToTarget = targetLocalPos - desiredLocalPos;
-
-                // Choose the largest out of the current size and the distance of the tank 'up' or 'down' from the camera.
-                size = Mathf.Max(size, Mathf.Abs(desiredPosToTarget.y));
-
-                // Choose the largest out of the current size and the calculated size based on the tank being to the left or right of the camera.
-                size = Mathf.Max(size, Mathf.Abs(desiredPosToTarget.x) / m_Camera.aspect);
-            }
-
-            // Add the edge buffer to the size.
-            size += m_ScreenEdgeBuffer;
-
-            // Make sure the camera's size isn't below the minimum.
-            size = Mathf.Max (size, m_MinSize);
-
-            return size;
-        }
-
-
-        public void SetStartPositionAndSize ()
-        {
-            // Find the desired position.
-            FindAveragePosition ();
-
-            // Set the camera's position to the desired position without damping.
-            transform.position = m_DesiredPosition;
-
-            // Find and set the required size of the camera.
-            m_Camera.orthographicSize = FindRequiredSize ();
-        }
+    public void SetAppropriatePositionAndSize()
+    {
+        // Set orthographic size and position without damping.
+        transform.position = FindAveragePosition();
+        m_Camera.orthographicSize = FindRequiredSize(transform.position);
     }
 }
