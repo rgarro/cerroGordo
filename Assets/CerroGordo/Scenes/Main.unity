@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 0.24648131, g: 0.28235212, b: 0.34570822, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -171,8 +171,120 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!1001 &1562740682
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4638562430981968, guid: 75a826f44d8ba4d92a0424226c451737, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -2.614128
+      objectReference: {fileID: 0}
+    - target: {fileID: 4638562430981968, guid: 75a826f44d8ba4d92a0424226c451737, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4638562430981968, guid: 75a826f44d8ba4d92a0424226c451737, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 20.297417
+      objectReference: {fileID: 0}
+    - target: {fileID: 4638562430981968, guid: 75a826f44d8ba4d92a0424226c451737, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4638562430981968, guid: 75a826f44d8ba4d92a0424226c451737, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4638562430981968, guid: 75a826f44d8ba4d92a0424226c451737, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4638562430981968, guid: 75a826f44d8ba4d92a0424226c451737, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4638562430981968, guid: 75a826f44d8ba4d92a0424226c451737, type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 146440220481269530, guid: 75a826f44d8ba4d92a0424226c451737,
+        type: 2}
+      propertyPath: m_SuspensionSpring.spring
+      value: 84191.125
+      objectReference: {fileID: 0}
+    - target: {fileID: 146440220481269530, guid: 75a826f44d8ba4d92a0424226c451737,
+        type: 2}
+      propertyPath: m_SuspensionSpring.damper
+      value: 13470.58
+      objectReference: {fileID: 0}
+    - target: {fileID: 146440220481269530, guid: 75a826f44d8ba4d92a0424226c451737,
+        type: 2}
+      propertyPath: m_SuspensionDistance
+      value: 0.19620001
+      objectReference: {fileID: 0}
+    - target: {fileID: 146020015087015716, guid: 75a826f44d8ba4d92a0424226c451737,
+        type: 2}
+      propertyPath: m_SuspensionSpring.spring
+      value: 27356.262
+      objectReference: {fileID: 0}
+    - target: {fileID: 146020015087015716, guid: 75a826f44d8ba4d92a0424226c451737,
+        type: 2}
+      propertyPath: m_SuspensionSpring.damper
+      value: 4377.002
+      objectReference: {fileID: 0}
+    - target: {fileID: 146697220594254268, guid: 75a826f44d8ba4d92a0424226c451737,
+        type: 2}
+      propertyPath: m_SuspensionSpring.spring
+      value: 84191.12
+      objectReference: {fileID: 0}
+    - target: {fileID: 146697220594254268, guid: 75a826f44d8ba4d92a0424226c451737,
+        type: 2}
+      propertyPath: m_SuspensionSpring.damper
+      value: 13470.578
+      objectReference: {fileID: 0}
+    - target: {fileID: 146697220594254268, guid: 75a826f44d8ba4d92a0424226c451737,
+        type: 2}
+      propertyPath: m_SuspensionDistance
+      value: 0.1962
+      objectReference: {fileID: 0}
+    - target: {fileID: 146012350636640594, guid: 75a826f44d8ba4d92a0424226c451737,
+        type: 2}
+      propertyPath: m_SuspensionSpring.spring
+      value: 38452.617
+      objectReference: {fileID: 0}
+    - target: {fileID: 146012350636640594, guid: 75a826f44d8ba4d92a0424226c451737,
+        type: 2}
+      propertyPath: m_SuspensionSpring.damper
+      value: 6152.419
+      objectReference: {fileID: 0}
+    - target: {fileID: 146012350636640594, guid: 75a826f44d8ba4d92a0424226c451737,
+        type: 2}
+      propertyPath: m_SuspensionDistance
+      value: 0.1962
+      objectReference: {fileID: 0}
+    - target: {fileID: 146449546588362478, guid: 75a826f44d8ba4d92a0424226c451737,
+        type: 2}
+      propertyPath: m_SuspensionSpring.spring
+      value: 27356.262
+      objectReference: {fileID: 0}
+    - target: {fileID: 146449546588362478, guid: 75a826f44d8ba4d92a0424226c451737,
+        type: 2}
+      propertyPath: m_SuspensionSpring.damper
+      value: 4377.002
+      objectReference: {fileID: 0}
+    - target: {fileID: 146449546588362478, guid: 75a826f44d8ba4d92a0424226c451737,
+        type: 2}
+      propertyPath: m_SuspensionDistance
+      value: 0.19620001
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 75a826f44d8ba4d92a0424226c451737, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &1589362387
 GameObject:
   m_ObjectHideFlags: 0
@@ -242,7 +354,7 @@ Transform:
   m_LocalScale: {x: 3.1260111, y: 1, z: 3.0511966}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1685927711
 GameObject:
@@ -262,7 +374,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!81 &1685927712
 AudioListener:
   m_ObjectHideFlags: 0
