@@ -22,18 +22,21 @@ public class barrelElevator : MonoBehaviour {
 	void Start () {
 		//this.xRot = this.transform.rotation.x;
 		this.xRot = 0;
+		//this.tPos = this.transform.position;
 	}
 
 
 	void Update () {
-		//Debug.Log ("here IM is only rocknroll ....");
+		//Debug.Log ("here IM is only rocknroll ...");
 		if(Input.GetKeyDown(this.downTurnKey)){
-			this.xRot = this.xRot - rotationSteps;
+			this.xRot = (this.xRot - rotationSteps); 
+			//Debug.Log (this.xRot);
 			Quaternion target = Quaternion.Euler(this.xRot,this.yPivot,this.zPivot);
 			this.transform.SetPositionAndRotation(this.transform.position,target);
+			//transform.Rotate(Vector3.up * Time.deltaTime, Space.World);
 		}
 		if(Input.GetKeyDown(this.upTurnKey)){
-			this.xRot = this.xRot + rotationSteps;
+			this.xRot = (this.xRot + rotationSteps); 
 			Quaternion target = Quaternion.Euler(this.xRot,this.yPivot,this.zPivot);
 			this.transform.SetPositionAndRotation(this.transform.position,target);
 		}
