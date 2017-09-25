@@ -46,6 +46,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\CerroGordo\Scripts\t43cameraFolllowed\turretRoller.cs" />
      <Compile Include="Assets\Scripts\CarSwitcher.cs" />
      <Compile Include="Assets\Scripts\DriftCamera.cs" />
      <Compile Include="Assets\Scripts\EasySuspension.cs" />

@@ -312,6 +312,7 @@ GameObject:
   - component: {fileID: 694775479}
   - component: {fileID: 694775481}
   - component: {fileID: 694775480}
+  - component: {fileID: 694775482}
   m_Layer: 0
   m_Name: turret
   m_TagString: Untagged
@@ -325,14 +326,14 @@ Transform:
   m_PrefabParentObject: {fileID: 400012, guid: b87cf83a8db4d431ba9ba4bed5875db1, type: 3}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 694775478}
-  m_LocalRotation: {x: -0.0000004707848, y: 0.7071068, z: 0.7071067, w: 0.00000047078484}
+  m_LocalRotation: {x: -0.00000019857768, y: -0.7069834, z: -0.7072302, w: 0.00000019864702}
   m_LocalPosition: {x: 0.029006165, y: 1.5900619, z: 0.75412095}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 914036272}
   m_Father: {fileID: 212745461}
   m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -89.98, y: 0, z: -179.99998}
 --- !u!23 &694775480
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -374,6 +375,22 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 694775478}
   m_Mesh: {fileID: 4300002, guid: b87cf83a8db4d431ba9ba4bed5875db1, type: 3}
+--- !u!114 &694775482
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 694775478}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b110b025bcde047d9be5536115637553, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  leftTurnKey: f
+  rightTurnKey: g
+  rotationSteps: 4
+  xPivot: -90
+  zPivot: -180
 --- !u!1 &914036271
 GameObject:
   m_ObjectHideFlags: 0
