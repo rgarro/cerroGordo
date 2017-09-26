@@ -27,15 +27,21 @@ public class barrelElevator : MonoBehaviour {
 
 
 	void Update () {
-		//Debug.Log ("here IM is only rocknroll ...");
+		//Debug.Log ("here IM is only rocknroll ....");
 		if(Input.GetKeyDown(this.downTurnKey)){
 			this.xRot = (this.xRot - rotationSteps); 
 			//Debug.Log (this.xRot);
 			Quaternion target = Quaternion.Euler(this.xRot,this.yPivot,this.zPivot);
 			this.transform.SetPositionAndRotation(this.transform.position,target);
-			//transform.Rotate(Vector3.up * Time.deltaTime, Space.World);
+			//transform.Rotate(Vector3.up * Time.deltaTime);
+		}
+		if(Input.GetKeyDown("c")){
+			Quaternion target = Quaternion.Euler(0,this.yPivot,this.zPivot);
+			this.transform.SetPositionAndRotation(this.transform.position,target);
+			//transform.Rotate(Vector3.up * Time.deltaTime);
 		}
 		if(Input.GetKeyDown(this.upTurnKey)){
+			//transform.Rotate(Vector3.down * Time.deltaTime);
 			this.xRot = (this.xRot + rotationSteps); 
 			Quaternion target = Quaternion.Euler(this.xRot,this.yPivot,this.zPivot);
 			this.transform.SetPositionAndRotation(this.transform.position,target);
