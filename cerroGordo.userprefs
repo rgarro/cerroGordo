@@ -2,8 +2,8 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/CerroGordo/Scripts/t43cameraFolllowed/barrelElevator.cs">
     <Files>
+      <File FileName="Assets/CerroGordo/Scripts/t43cameraFolllowed/barrelElevator.cs" Line="39" Column="26" />
       <File FileName="Assets/CerroGordo/Scripts/t43cameraFolllowed/turretRoller.cs" Line="13" Column="20" />
-      <File FileName="Assets/CerroGordo/Scripts/t43cameraFolllowed/barrelElevator.cs" Line="36" Column="50" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
