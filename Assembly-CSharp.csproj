@@ -54,6 +54,7 @@
      <Compile Include="Assets\Scripts\EasySuspension.cs" />
      <Compile Include="Assets\Scripts\GraphOverlay.cs" />
      <Compile Include="Assets\Scripts\WheelDrive.cs" />
+     <Compile Include="Assets\vehicleSounds.cs" />
      <None Include="Assets\Fonts\LICENSE.txt" />
  <Reference Include="Facebook.Unity.Settings">
  <HintPath>/Users/rolando/Documents/Unity/cerroGordo/Library/FacebookSDK/Facebook.Unity.Settings.dll</HintPath>
