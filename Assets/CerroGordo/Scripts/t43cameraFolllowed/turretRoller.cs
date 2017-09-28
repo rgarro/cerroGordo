@@ -12,7 +12,7 @@ public class turretRoller : MonoBehaviour {
 
 	public string leftTurnKey;
 	public string rightTurnKey;
-	public int rotationSteps;
+	public float rotationSteps;
 	public float xPivot;
 	public float zPivot;
 	private float yRot;
@@ -22,7 +22,7 @@ public class turretRoller : MonoBehaviour {
 	void Start () {
 		this.yRot = this.transform.rotation.y;
 	}
-	
+	//ojo la turreta viene torcida de ukrania para torcer los cables de detonar la municion
 
 	void Update () {
 		//Debug.Log ("here IM is only rocknroll ....");
@@ -30,8 +30,10 @@ public class turretRoller : MonoBehaviour {
 			this.yRot = this.yRot - rotationSteps;
 			Quaternion target = Quaternion.Euler(this.xPivot,this.yRot,this.zPivot);
 			this.transform.SetPositionAndRotation(this.transform.position,target);
+			//transform.Rotate(Vector3.left * Time.deltaTime * rotationSteps);///la 
 		}
 		if(Input.GetKeyDown(this.rightTurnKey)){
+			//transform.Rotate(Vector3.right * Time.deltaTime * rotationSteps);
 			this.yRot = this.yRot + rotationSteps;
 			Quaternion target = Quaternion.Euler(this.xPivot,this.yRot,this.zPivot);
 			this.transform.SetPositionAndRotation(this.transform.position,target);

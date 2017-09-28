@@ -194,7 +194,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   leftTurnKey: f
   rightTurnKey: g
-  rotationSteps: 2
+  rotationSteps: 6.5
   xPivot: -90
   zPivot: 0
 --- !u!1 &19007493
@@ -2219,9 +2219,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   upTurnKey: r
   downTurnKey: t
-  rotationSteps: 0.3
-  yPivot: 0
-  zPivot: 0
+  rotationSteps: 7.5
 --- !u!1 &2080526349
 GameObject:
   m_ObjectHideFlags: 0
