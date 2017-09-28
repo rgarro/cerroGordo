@@ -59,7 +59,7 @@ public class vehicleSounds : MonoBehaviour {
 		}
 
 		//float angle = m_CarController.maxAngle * Input.GetAxis("Horizontal");
-		float torque = m_CarController.maxTorque * Input.GetAxis("Vertical");
+		float torque =  Input.GetAxis("Vertical");//m_CarController.maxTorque * Input.GetAxis("Vertical");
 		//float handBrake = Input.GetKey(KeyCode.X) ? m_CarController.brakeTorque : 0;
 
 		if (m_StartedSound)

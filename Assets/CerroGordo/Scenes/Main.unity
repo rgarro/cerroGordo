@@ -990,8 +990,8 @@ MonoBehaviour:
   lowDecelClip: {fileID: 8300000, guid: 5699dddcce16c4543b95951c4ce0e092, type: 3}
   highAccelClip: {fileID: 8300000, guid: 03e3bd08a6e70684dbe299a3e185fdd2, type: 3}
   highDecelClip: {fileID: 8300000, guid: 03bf91d88fce91c41995d27de63cc967, type: 3}
-  pitchMultiplier: 1.08
-  lowPitchMin: 0.75
+  pitchMultiplier: 0.69
+  lowPitchMin: 0.42
   lowPitchMax: 3.29
   highPitchMultiplier: 0.25
   maxRolloffDistance: 491.73
