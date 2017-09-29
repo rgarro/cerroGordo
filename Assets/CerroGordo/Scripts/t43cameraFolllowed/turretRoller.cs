@@ -28,14 +28,18 @@ public class turretRoller : MonoBehaviour {
 	void Update () {
 		//Debug.Log ("here IM is only rocknroll ....");
 		if(Input.GetKeyDown(this.leftTurnKey)){
-			this.servoSound.Play ();
+			if (!this.servoSound.isPlaying) {
+				this.servoSound.Play ();
+			}
 			this.yRot = this.yRot - rotationSteps;
 			Quaternion target = Quaternion.Euler(this.xPivot,this.yRot,this.zPivot);
 			this.transform.SetPositionAndRotation(this.transform.position,target);
 			//transform.Rotate(Vector3.left * Time.deltaTime * rotationSteps);///la 
 		}
 		if(Input.GetKeyDown(this.rightTurnKey)){
-			this.servoSound.Play ();
+			if (!this.servoSound.isPlaying) {
+				this.servoSound.Play ();
+			}
 			//transform.Rotate(Vector3.right * Time.deltaTime * rotationSteps);
 			this.yRot = this.yRot + rotationSteps;
 			Quaternion target = Quaternion.Euler(this.xPivot,this.yRot,this.zPivot);
