@@ -18,16 +18,23 @@ public class turretRoller : MonoBehaviour {
 	private float yRot;
 	private Vector3 tPos;
 	private AudioSource servoSound;
+	private bool gRight;
+	private bool gLeft;
 
 	void Start () {
 		this.yRot = this.transform.rotation.y;
 		this.servoSound = GetComponent<AudioSource> ();
+		gRight = false;
+		gLeft = false;
 	}
 	//ojo la turreta viene torcida de ukrania para torcer los cables de detonar la municion
 
 	void Update () {
 		//Debug.Log ("here IM is only rocknroll ....");
 		if(Input.GetKeyDown(this.leftTurnKey)){
+			gLeft = true;
+		}
+		if(gLeft){
 			if (!this.servoSound.isPlaying) {
 				this.servoSound.Play ();
 			}
@@ -37,6 +44,9 @@ public class turretRoller : MonoBehaviour {
 			//transform.Rotate(Vector3.left * Time.deltaTime * rotationSteps);///la 
 		}
 		if(Input.GetKeyDown(this.rightTurnKey)){
+			gRight = true;
+		}
+		if(gRight){
 			if (!this.servoSound.isPlaying) {
 				this.servoSound.Play ();
 			}
@@ -46,6 +56,8 @@ public class turretRoller : MonoBehaviour {
 			this.transform.SetPositionAndRotation(this.transform.position,target);
 		}
 		if (Input.GetKeyUp (this.rightTurnKey) || Input.GetKeyUp(this.leftTurnKey)) {
+			gRight = false;
+			gLeft = false;
 			this.servoSound.Stop ();
 		}
 	}
