@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\CerroGordo\Scripts\WheelDriveXP.cs" />
+     <Compile Include="Assets\CerroGordo\Scripts\gunLoader.cs" />
      <Compile Include="Assets\CerroGordo\Scripts\t43cameraFolllowed\barrelElevator.cs" />
      <Compile Include="Assets\CerroGordo\Scripts\t43cameraFolllowed\turretRoller.cs" />
      <Compile Include="Assets\CerroGordo\Scripts\vehicleSounds.cs" />
