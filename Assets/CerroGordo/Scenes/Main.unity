@@ -424,8 +424,8 @@ WheelCollider:
   m_Center: {x: 0, y: 0, z: 0}
   m_Radius: 62.2
   m_SuspensionSpring:
-    spring: 12801.564
-    damper: 2048.2505
+    spring: 12801.562
+    damper: 2048.2498
     targetPosition: 0.5
   m_SuspensionDistance: 0.1962
   m_ForceAppPointDistance: 63.171913
@@ -685,10 +685,10 @@ WheelCollider:
   m_Center: {x: 0, y: 0, z: 0}
   m_Radius: 62.2
   m_SuspensionSpring:
-    spring: 12631.927
-    damper: 2021.1084
+    spring: 12631.936
+    damper: 2021.1096
     targetPosition: 0.5
-  m_SuspensionDistance: 0.19620001
+  m_SuspensionDistance: 0.1962
   m_ForceAppPointDistance: 63.171562
   m_Mass: 20
   m_WheelDampingRate: 0.25
@@ -746,7 +746,7 @@ WheelCollider:
     spring: 12438.585
     damper: 1990.1737
     targetPosition: 0.5
-  m_SuspensionDistance: 0.19620003
+  m_SuspensionDistance: 0.19620001
   m_ForceAppPointDistance: 63.171913
   m_Mass: 20
   m_WheelDampingRate: 0.25
@@ -934,10 +934,10 @@ WheelCollider:
   m_Center: {x: 0, y: 0, z: 0}
   m_Radius: 62.2
   m_SuspensionSpring:
-    spring: 12008.688
-    damper: 1921.3903
+    spring: 12008.686
+    damper: 1921.3899
     targetPosition: 0.5
-  m_SuspensionDistance: 0.19620001
+  m_SuspensionDistance: 0.19620003
   m_ForceAppPointDistance: 63.17101
   m_Mass: 20
   m_WheelDampingRate: 0.25
@@ -1377,6 +1377,7 @@ GameObject:
   m_Component:
   - component: {fileID: 974154228}
   - component: {fileID: 974154229}
+  - component: {fileID: 974154230}
   m_Layer: 0
   m_Name: sphereTurret
   m_TagString: Untagged
@@ -1415,6 +1416,93 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e391fe9cc1938464da59699302c949a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  upTurnKey: r
+  downTurnKey: t
+  rotationSteps: 2.5
+  elevationSteps: 0
+  leftTurnKey: f
+  rightTurnKey: g
+  play_servo: 0
+--- !u!82 &974154230
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 974154227}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 0421d4004acad4db19b0febce9ff0728, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!1 &1011819400
 GameObject:
   m_ObjectHideFlags: 0
@@ -1613,8 +1701,8 @@ WheelCollider:
   m_Center: {x: 0, y: 0, z: 0}
   m_Radius: 62.2
   m_SuspensionSpring:
-    spring: 12987.785
-    damper: 2078.0457
+    spring: 12987.788
+    damper: 2078.0461
     targetPosition: 0.5
   m_SuspensionDistance: 0.19620001
   m_ForceAppPointDistance: 63.171562
@@ -1742,8 +1830,8 @@ WheelCollider:
   m_Center: {x: 0, y: 0, z: 0}
   m_Radius: 62.2
   m_SuspensionSpring:
-    spring: 12364.556
-    damper: 1978.329
+    spring: 12364.553
+    damper: 1978.3285
     targetPosition: 0.5
   m_SuspensionDistance: 0.1962
   m_ForceAppPointDistance: 63.17101
@@ -2137,10 +2225,10 @@ WheelCollider:
   m_Center: {x: 0, y: 0, z: 0}
   m_Radius: 62.2
   m_SuspensionSpring:
-    spring: 12201.958
-    damper: 1952.3134
+    spring: 12201.956
+    damper: 1952.3131
     targetPosition: 0.5
-  m_SuspensionDistance: 0.1962
+  m_SuspensionDistance: 0.19620003
   m_ForceAppPointDistance: 63.171856
   m_Mass: 20
   m_WheelDampingRate: 0.25
@@ -2615,10 +2703,10 @@ WheelCollider:
   m_Center: {x: 0, y: 0, z: 0}
   m_Radius: 62.2
   m_SuspensionSpring:
-    spring: 12564.935
-    damper: 2010.3895
+    spring: 12564.933
+    damper: 2010.3893
     targetPosition: 0.5
-  m_SuspensionDistance: 0.19620001
+  m_SuspensionDistance: 0.1962
   m_ForceAppPointDistance: 63.171856
   m_Mass: 20
   m_WheelDampingRate: 0.25
