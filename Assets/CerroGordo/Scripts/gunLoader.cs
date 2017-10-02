@@ -18,6 +18,7 @@ public class gunLoader : MonoBehaviour {
 	public float shootRate;
 	public float shootForce;
 	private float shootRateTime = 0f;
+	public GameObject turret;
 
 
 	void Start () {
@@ -30,9 +31,11 @@ public class gunLoader : MonoBehaviour {
 		float x = this.transform.position.x * moveForce * Time.deltaTime;
 		float y = this.transform.position.y * moveForce * Time.deltaTime;
 		float z = this.transform.position.z * moveForce * Time.deltaTime;
-		Vector3 rbg = new Vector3(x,y,z);
+		Quaternion rotation = Quaternion.Euler(transform.rotation.x, transform.rotation.y, turret.transform.rotation.z);
+		Vector3 rbg = new Vector3(x,y,turret.transform.position.y);
+		Vector3 position = new Vector3(this.transform.position.x,this.transform.position.y + 2,this.transform.position.z);
 		if(Input.GetKey(KeyCode.Space)){
-			GameObject go = (GameObject)Instantiate (bullet,this.transform.position,this.transform.rotation);
+			GameObject go = (GameObject)Instantiate (bullet,position,rotation);
 			Rigidbody rb =  go.GetComponent<Rigidbody>();
 			rb.AddForce (rbg);
 		}
