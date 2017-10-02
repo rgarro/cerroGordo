@@ -27,7 +27,6 @@ public class turretRoller : MonoBehaviour {
 		gRight = false;
 		gLeft = false;
 	}
-	//ojo la turreta viene torcida de ukrania para torcer los cables de detonar la municion
 
 	void Update () {
 		//Debug.Log ("here IM is only rocknroll ....");
