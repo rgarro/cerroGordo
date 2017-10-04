@@ -27,12 +27,23 @@ public class gunLoader : MonoBehaviour {
 	}
 
 	void Update () {
-		
-		float x = this.transform.position.x * moveForce * Time.deltaTime;
+		Debug.Log ("rot " + turret.transform.rotation.z);
+		Debug.Log ("local " + turret.transform.localRotation.z);
+		Debug.Log ("eulerz " + turret.transform.eulerAngles.z);
+		Debug.Log ("eulerx " + turret.transform.eulerAngles.x);
+		Debug.Log ("eulery " + turret.transform.eulerAngles.y);//
+		/*
+float x = this.transform.position.x * moveForce * Time.deltaTime;
 		float y = this.transform.position.y * moveForce * Time.deltaTime;
 		float z = this.transform.position.z * moveForce * Time.deltaTime;
-		Quaternion rotation = Quaternion.Euler(transform.rotation.x, transform.rotation.y, turret.transform.rotation.z);
-		Vector3 rbg = new Vector3(x,y,turret.transform.position.y);
+		*/
+		float x = this.transform.position.x * moveForce;
+		float y = this.transform.position.y * moveForce;
+		float z = this.transform.position.z * moveForce;
+		//Quaternion rotation = Quaternion.Euler(transform.rotation.x, transform.rotation.y * Time.deltaTime, turret.transform.rotation.z* Time.deltaTime);
+		Quaternion rotation = Quaternion.Euler(transform.rotation.x,turret.transform.rotation.z , transform.rotation.z );
+		Debug.Log (rotation);
+		Vector3 rbg = new Vector3(x,y,z);
 		Vector3 position = new Vector3(this.transform.position.x,this.transform.position.y + 2,this.transform.position.z);
 		if(Input.GetKey(KeyCode.Space)){
 			GameObject go = (GameObject)Instantiate (bullet,position,rotation);
