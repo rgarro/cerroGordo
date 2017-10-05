@@ -88,6 +88,7 @@
 -define:UNITY_TEAM_LICENSE
 'Assets/CerroGordo/Scripts/BulletTimer.cs'
 'Assets/CerroGordo/Scripts/WheelDriveXP.cs'
+'Assets/CerroGordo/Scripts/eulerGunController.cs'
 'Assets/CerroGordo/Scripts/gunLoader.cs'
 'Assets/CerroGordo/Scripts/sphereTurret/turretController.cs'
 'Assets/CerroGordo/Scripts/t43cameraFolllowed/barrelElevator.cs'
