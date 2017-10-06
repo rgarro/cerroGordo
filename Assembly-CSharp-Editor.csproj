@@ -6,7 +6,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{A4F8EA7F-1AE6-2E19-F825-C0831B9262A6}</ProjectGuid>
+    <ProjectGuid>{3D2AABE7-8F30-A34C-6FC2-6DF396DF2BFD}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp-Editor</AssemblyName>
@@ -50,7 +50,7 @@
      <Compile Include="Assets\Scripts\Editor\VehicleSkeletonWizard.cs" />
      <None Include="Assets\Fonts\LICENSE.txt" />
  <Reference Include="Facebook.Unity.Settings">
- <HintPath>/Users/rolando/Documents/Unity/cerroGordo/Library/FacebookSDK/Facebook.Unity.Settings.dll</HintPath>
+ <HintPath>/Users/rolando/Documents/Unity/CGo/Library/FacebookSDK/Facebook.Unity.Settings.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.Analytics">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll</HintPath>
@@ -115,7 +115,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp.csproj">
-      <Project>{42677976-EDB0-6F50-FA72-C5E30B9C7E10}</Project>      <Name>Assembly-CSharp</Name>    </ProjectReference>
+      <Project>{30500487-3688-7B6F-A446-360D0D492AD3}</Project>      <Name>Assembly-CSharp</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

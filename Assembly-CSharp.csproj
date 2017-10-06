@@ -6,7 +6,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{42677976-EDB0-6F50-FA72-C5E30B9C7E10}</ProjectGuid>
+    <ProjectGuid>{30500487-3688-7B6F-A446-360D0D492AD3}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -48,6 +48,7 @@
   <ItemGroup>
      <Compile Include="Assets\CerroGordo\Scripts\BulletTimer.cs" />
      <Compile Include="Assets\CerroGordo\Scripts\WheelDriveXP.cs" />
+     <Compile Include="Assets\CerroGordo\Scripts\eulerGunController.cs" />
      <Compile Include="Assets\CerroGordo\Scripts\gunLoader.cs" />
      <Compile Include="Assets\CerroGordo\Scripts\sphereTurret\turretController.cs" />
      <Compile Include="Assets\CerroGordo\Scripts\t43cameraFolllowed\barrelElevator.cs" />
@@ -60,7 +61,7 @@
      <Compile Include="Assets\Scripts\WheelDrive.cs" />
      <None Include="Assets\Fonts\LICENSE.txt" />
  <Reference Include="Facebook.Unity.Settings">
- <HintPath>/Users/rolando/Documents/Unity/cerroGordo/Library/FacebookSDK/Facebook.Unity.Settings.dll</HintPath>
+ <HintPath>/Users/rolando/Documents/Unity/CGo/Library/FacebookSDK/Facebook.Unity.Settings.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.Analytics">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll</HintPath>
