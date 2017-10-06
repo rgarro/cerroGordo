@@ -2647,6 +2647,8 @@ MonoBehaviour:
   upTurnKey: r
   downTurnKey: t
   rotationSteps: 7.5
+  minElev: 82
+  maxElev: 50
 --- !u!82 &1939613999
 AudioSource:
   m_ObjectHideFlags: 0
