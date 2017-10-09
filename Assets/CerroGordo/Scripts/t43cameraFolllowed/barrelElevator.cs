@@ -26,24 +26,35 @@ public class barrelElevator : MonoBehaviour {
 		this.gDown = false;
 	}
 
+	private float radianToDegree(float angle){
+		return angle * (180.0f / Mathf.PI);
+	}
+
 	void Update () {
 		Debug.Log (this.transform.localEulerAngles.x);
+		//float elevRad = radianToDegree(this.transform.rotation.x)+90;
+		float elevRad = this.transform.localEulerAngles.x;
 		if(Input.GetKeyDown(this.downTurnKey)){
 			this.gDown = true;
+			this.gUP = false;
 		}
 		if(this.gDown){
-			//if (this.transform.localEulerAngles.x > this.minElev) 
+			if (elevRad < this.minElev) { 
+				Debug.Log ("here");		
 				this.soundOn ();
 				this.rotateUp ();
+			}
 			
 		}
 		if(Input.GetKeyDown(this.upTurnKey)){
+			this.gDown = false;
 			this.gUP = true;
 		}
 		if(this.gUP){
-			//if (this.transform.localEulerAngles.x < this.maxElev)
+			if (elevRad > this.maxElev) {
 				this.soundOn ();
 				this.rotateDown ();
+			}
 		}
 		if (Input.GetKeyUp (this.downTurnKey) || Input.GetKeyUp(this.upTurnKey)) {
 			this.servoSound.Stop ();

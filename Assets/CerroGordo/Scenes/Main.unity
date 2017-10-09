@@ -2647,8 +2647,8 @@ MonoBehaviour:
   upTurnKey: r
   downTurnKey: t
   rotationSteps: 7.5
-  minElev: 82
-  maxElev: 50
+  minElev: 89
+  maxElev: 43
 --- !u!82 &1939613999
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2742,10 +2742,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveForce: 150
   bullet: {fileID: 1275540663970636, guid: 8f4ed1f4ff6a54b35bb626433e89ca68, type: 2}
-  shootRate: 0.1
+  shootRate: 0.5
   shootForce: 50000
   turret: {fileID: 7731763}
-  bulletSpeed: 25
+  bulletSpeed: 75
   modelCorrectionAngle: 90
 --- !u!1 &2080526349
 GameObject:
