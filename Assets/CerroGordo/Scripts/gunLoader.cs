@@ -12,27 +12,36 @@ using UnityEngine;
 public class gunLoader : MonoBehaviour {
 
 
-	public float moveForce = 0f;
-	private Rigidbody rbody;
 	public GameObject bullet;
-	public float shootRate;
-	public float shootForce;
-	private float shootRateTime = 0f;
 	public GameObject turret;
 	public float bulletSpeed;
 	public float modelCorrectionAngle;
-
+	private AudioSource gunSound;
+	public AudioClip gunShot;
+	private bool is_shooting = false;
 
 	void Start () {
-		rbody = GetComponent<Rigidbody> ();
-
+		this.gunSound = GetComponent<AudioSource> ();
+		this.gunSound.clip = gunShot;
+		this.gunSound.volume = 0.2F;
 	}
 
 	void Update () {
-		float rotX = this.transform.localEulerAngles.x + modelCorrectionAngle ;
-		Quaternion rotation = Quaternion.Euler(rotX,turret.transform.eulerAngles.y,this.transform.localEulerAngles.z);
-		Vector3 position = new Vector3(this.transform.position.x,this.transform.position.y,this.transform.position.z);
-		if(Input.GetKey(KeyCode.Space)){
+		if(Input.GetKeyDown(KeyCode.Space)){
+			this.is_shooting = true;
+			//this.gunSound.Play ();
+		}
+		if (Input.GetKeyUp (KeyCode.Space)) {
+			this.is_shooting = false;
+			//this.gunSound.Stop ();
+		}
+		if(this.is_shooting){
+			if (!this.gunSound.isPlaying) {
+				this.gunSound.Play ();
+			}
+			float rotX = this.transform.localEulerAngles.x + modelCorrectionAngle;
+			Quaternion rotation = Quaternion.Euler(rotX,turret.transform.eulerAngles.y,this.transform.localEulerAngles.z);
+			Vector3 position = new Vector3(this.transform.position.x,this.transform.position.y,this.transform.position.z);
 			GameObject go = (GameObject)Instantiate (bullet,position,rotation);
 			Rigidbody rb =  go.GetComponent<Rigidbody>();
 			rb.velocity = transform.forward * bulletSpeed;

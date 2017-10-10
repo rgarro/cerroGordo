@@ -2569,8 +2569,8 @@ GameObject:
   - component: {fileID: 1939613997}
   - component: {fileID: 1939613996}
   - component: {fileID: 1939613998}
-  - component: {fileID: 1939613999}
   - component: {fileID: 1939614000}
+  - component: {fileID: 1939613999}
   m_Layer: 0
   m_Name: gun
   m_TagString: gunPipe
@@ -2647,6 +2647,7 @@ MonoBehaviour:
   upTurnKey: r
   downTurnKey: t
   rotationSteps: 7.5
+  servoSounding: {fileID: 8300000, guid: 0421d4004acad4db19b0febce9ff0728, type: 3}
   minElev: 89
   maxElev: 43
 --- !u!82 &1939613999
@@ -2659,7 +2660,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 0421d4004acad4db19b0febce9ff0728, type: 3}
-  m_PlayOnAwake: 0
+  m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -2740,13 +2741,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 539c4b89aca644c718d979f8f0cada8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveForce: 150
   bullet: {fileID: 1275540663970636, guid: 8f4ed1f4ff6a54b35bb626433e89ca68, type: 2}
-  shootRate: 0.5
-  shootForce: 50000
   turret: {fileID: 7731763}
   bulletSpeed: 75
   modelCorrectionAngle: 90
+  gunShot: {fileID: 8300000, guid: 9b33a06527a424c6097c94427a1db4e6, type: 3}
 --- !u!1 &2080526349
 GameObject:
   m_ObjectHideFlags: 0

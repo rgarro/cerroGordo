@@ -14,6 +14,7 @@ public class barrelElevator : MonoBehaviour {
 	public string downTurnKey;
 	public float rotationSteps;
 	private AudioSource servoSound;
+	public AudioClip servoSounding;
 	private bool gUP;
 	private bool gDown;
 
@@ -22,6 +23,9 @@ public class barrelElevator : MonoBehaviour {
 
 	void Start () {
 		this.servoSound = GetComponent<AudioSource> ();
+		//servoSound.Play();
+		//servoSound.clip = Resources.Load<AudioClip>("CerroGordo/Assets/Audio/Tek_Open-Marco-7541_hifi");
+
 		this.gUP = false;
 		this.gDown = false;
 	}
@@ -31,8 +35,6 @@ public class barrelElevator : MonoBehaviour {
 	}
 
 	void Update () {
-		Debug.Log (this.transform.localEulerAngles.x);
-		//float elevRad = radianToDegree(this.transform.rotation.x)+90;
 		float elevRad = this.transform.localEulerAngles.x;
 		if(Input.GetKeyDown(this.downTurnKey)){
 			this.gDown = true;
