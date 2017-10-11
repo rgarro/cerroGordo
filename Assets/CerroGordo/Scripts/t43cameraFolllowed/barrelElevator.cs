@@ -73,6 +73,7 @@ public class barrelElevator : MonoBehaviour {
 	}
 
 	private void soundOn(){
+		this.servoSound.clip = this.servoSounding;
 		if (!this.servoSound.isPlaying) {
 			this.servoSound.Play ();
 		}

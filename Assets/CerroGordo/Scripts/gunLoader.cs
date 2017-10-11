@@ -22,7 +22,7 @@ public class gunLoader : MonoBehaviour {
 
 	void Start () {
 		this.gunSound = GetComponent<AudioSource> ();
-		this.gunSound.clip = gunShot;
+		//this.gunSound.clip = gunShot;
 		this.gunSound.volume = 0.2F;
 	}
 
@@ -36,6 +36,7 @@ public class gunLoader : MonoBehaviour {
 			//this.gunSound.Stop ();
 		}
 		if(this.is_shooting){
+			this.gunSound.clip = gunShot;
 			if (!this.gunSound.isPlaying) {
 				this.gunSound.Play ();
 			}
