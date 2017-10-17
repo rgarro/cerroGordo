@@ -6,6 +6,7 @@ TagManager:
   tags:
   - gunPipe
   - Turret
+  - Boundary
   layers:
   - Default
   - TransparentFX
