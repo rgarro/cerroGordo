@@ -1,13 +1,15 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/CerroGordo/Scripts/destroyByBtrGunHit.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/CerroGordo/Scripts/MoverB.cs">
     <Files>
-      <File FileName="Assets/CerroGordo/Scripts/destroyByBtrGunHit.cs" Line="13" Column="23" />
+      <File FileName="Assets/CerroGordo/Scripts/destroyByBtrGunHit.cs" Line="19" Column="1" />
       <File FileName="Assets/CerroGordo/Scripts/DestroyByBoundary.cs" Line="1" Column="1" />
-      <File FileName="Assets/CerroGordo/Scripts/t43cameraFolllowed/barrelElevator.cs" Line="76" Column="45" />
+      <File FileName="Assets/CerroGordo/Scripts/t43cameraFolllowed/barrelElevator.cs" Line="1" Column="1" />
       <File FileName="Assets/CerroGordo/Scripts/gunLoader.cs" Line="1" Column="1" />
       <File FileName="Assets/CerroGordo/Scripts/eulerGunController.cs" Line="1" Column="1" />
       <File FileName="Assets/CerroGordo/Scripts/vehicleSounds.cs" Line="1" Column="1" />
+      <File FileName="Assets/CerroGordo/Scripts/Mover.cs" Line="12" Column="3" />
+      <File FileName="Assets/CerroGordo/Scripts/MoverB.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

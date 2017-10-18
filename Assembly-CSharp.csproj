@@ -48,10 +48,14 @@
   <ItemGroup>
      <Compile Include="Assets\CerroGordo\Scripts\BulletTimer.cs" />
      <Compile Include="Assets\CerroGordo\Scripts\DestroyByBoundary.cs" />
+     <Compile Include="Assets\CerroGordo\Scripts\DestroyByTime.cs" />
+     <Compile Include="Assets\CerroGordo\Scripts\Mover.cs" />
+     <Compile Include="Assets\CerroGordo\Scripts\MoverB.cs" />
      <Compile Include="Assets\CerroGordo\Scripts\WheelDriveXP.cs" />
      <Compile Include="Assets\CerroGordo\Scripts\destroyByBtrGunHit.cs" />
      <Compile Include="Assets\CerroGordo\Scripts\eulerGunController.cs" />
      <Compile Include="Assets\CerroGordo\Scripts\gunLoader.cs" />
+     <Compile Include="Assets\CerroGordo\Scripts\heliEngine.cs" />
      <Compile Include="Assets\CerroGordo\Scripts\sphereTurret\turretController.cs" />
      <Compile Include="Assets\CerroGordo\Scripts\t43cameraFolllowed\barrelElevator.cs" />
      <Compile Include="Assets\CerroGordo\Scripts\t43cameraFolllowed\turretRoller.cs" />
