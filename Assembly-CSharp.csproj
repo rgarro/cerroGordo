@@ -52,8 +52,10 @@
      <Compile Include="Assets\CerroGordo\Scripts\Mover.cs" />
      <Compile Include="Assets\CerroGordo\Scripts\MoverB.cs" />
      <Compile Include="Assets\CerroGordo\Scripts\WheelDriveXP.cs" />
+     <Compile Include="Assets\CerroGordo\Scripts\batiComputadora.cs" />
      <Compile Include="Assets\CerroGordo\Scripts\destroyByBtrGunHit.cs" />
      <Compile Include="Assets\CerroGordo\Scripts\eulerGunController.cs" />
+     <Compile Include="Assets\CerroGordo\Scripts\gameController.cs" />
      <Compile Include="Assets\CerroGordo\Scripts\gunLoader.cs" />
      <Compile Include="Assets\CerroGordo\Scripts\heliEngine.cs" />
      <Compile Include="Assets\CerroGordo\Scripts\sphereTurret\turretController.cs" />

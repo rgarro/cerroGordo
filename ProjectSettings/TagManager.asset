@@ -7,6 +7,7 @@ TagManager:
   - gunPipe
   - Turret
   - Boundary
+  - batiComputadora
   layers:
   - Default
   - TransparentFX
