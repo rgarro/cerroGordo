@@ -1743,7 +1743,7 @@ RectTransform:
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -50.6, y: 281.8}
   m_SizeDelta: {x: 700.2, y: 49.6}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_Pivot: {x: 0.6, y: -0.79}
 --- !u!114 &970319939
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1756,7 +1756,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 0.9558824, g: 0.691, b: 0.07028548, a: 1}
   m_RaycastTarget: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -1765,10 +1765,10 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_FontSize: 18
     m_FontStyle: 3
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 1
     m_MaxSize: 40
     m_Alignment: 0
     m_AlignByGeometry: 0
@@ -1776,11 +1776,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Drive: Arrow Keys  f g: turns turret   r  t : elevation Space: Shoots ...\n\u0432\u043E\u0434\u0438\u0442\u044C
-    : \u041A\u043B\u0430\u0432\u0438\u0448\u0438 \u0441\u043E \u0441\u0442\u0440\u0435\u043B\u043A\u0430\u043C\u0438
-    \ f g: \u043F\u043E\u0432\u043E\u0440\u0430\u0447\u0438\u0432\u0430\u0435\u0442
-    \u0431\u0430\u0448\u043D\u044E r t : \u0432\u044B\u0441\u043E\u0442\u0430 \u043A\u043B\u0430\u0432\u0438\u0448\u0430
-    \u043F\u0440\u043E\u0431\u0435\u043B\u0430\n"
+  m_Text: 'Drive: Arrow Keys  f g: turns turret   r  t : elevation Space: Shoots ...
+
+'
 --- !u!222 &970319940
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1883,13 +1881,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1019686559}
-  m_LocalRotation: {x: 0.21160726, y: 0.0008675726, z: -0.011269974, w: 0.97728944}
-  m_LocalPosition: {x: -0.19, y: 5.02, z: -8.29}
+  m_LocalRotation: {x: 0.12505057, y: 0.0018529785, z: -0.011150403, w: 0.99208605}
+  m_LocalPosition: {x: -0.2, y: 7.3, z: -14.6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 903124503}
   m_RootOrder: 10
-  m_LocalEulerAnglesHint: {x: 24.433, y: -0.193, z: -1.363}
+  m_LocalEulerAnglesHint: {x: 14.369, y: 0.053000003, z: -1.281}
 --- !u!81 &1019686561
 AudioListener:
   m_ObjectHideFlags: 0
@@ -1929,7 +1927,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 67
+  field of view: 49.6
   orthographic: 0
   orthographic size: 5
   m_Depth: -1

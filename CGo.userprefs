@@ -1,7 +1,8 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/CerroGordo/Scripts/batiComputadora.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/CerroGordo/Scripts/DestroyByTime.cs">
     <Files>
+      <File FileName="Assets/CerroGordo/Scripts/batiComputadora.cs" Line="23" Column="41" />
       <File FileName="Assets/CerroGordo/Scripts/destroyByBtrGunHit.cs" Line="1" Column="1" />
       <File FileName="Assets/CerroGordo/Scripts/DestroyByBoundary.cs" Line="1" Column="1" />
       <File FileName="Assets/CerroGordo/Scripts/t43cameraFolllowed/barrelElevator.cs" Line="1" Column="1" />
@@ -10,7 +11,7 @@
       <File FileName="Assets/CerroGordo/Scripts/vehicleSounds.cs" Line="1" Column="1" />
       <File FileName="Assets/CerroGordo/Scripts/Mover.cs" Line="1" Column="1" />
       <File FileName="Assets/CerroGordo/Scripts/MoverB.cs" Line="1" Column="1" />
-      <File FileName="Assets/CerroGordo/Scripts/batiComputadora.cs" Line="12" Column="50" />
+      <File FileName="Assets/CerroGordo/Scripts/DestroyByTime.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
