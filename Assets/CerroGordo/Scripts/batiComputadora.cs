@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class batiComputadora : MonoBehaviour {
 
@@ -10,6 +11,8 @@ public class batiComputadora : MonoBehaviour {
 	public float spawnWait;
 	public float startWait;
 	public float waveWait;
+	public Text scoreBox;
+	public int Score;
 
 	IEnumerator spawnWaves(){
 		yield return new WaitForSeconds (startWait);
@@ -27,10 +30,20 @@ public class batiComputadora : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		StartCoroutine(spawnWaves ());
+		this.UpdateScore ();
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		
+	}
+
+	public void addScore(int scoreValue){
+		Score += scoreValue;
+		UpdateScore ();
+	}
+
+	void UpdateScore(){
+		this.scoreBox.text = Score  + " points";
 	}
 }

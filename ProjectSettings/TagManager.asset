@@ -8,6 +8,7 @@ TagManager:
   - Turret
   - Boundary
   - batiComputadora
+  - ScoreText
   layers:
   - Default
   - TransparentFX
