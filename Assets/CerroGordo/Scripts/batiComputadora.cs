@@ -46,4 +46,10 @@ public class batiComputadora : MonoBehaviour {
 	void UpdateScore(){
 		this.scoreBox.text = Score  + " points";
 	}
+
+	public void doRestart(){
+		//Debug.Log("will restart");
+		Application.LoadLevel(Application.loadedLevel);
+	}
+
 }
