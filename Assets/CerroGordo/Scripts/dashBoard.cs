@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class dashBoard : MonoBehaviour
 {
-    private Rect windowRect = new Rect(20,20,120,50);
+    private Rect windowRect = new Rect(20,20,200,150);
 
     void OnGUI(){
       windowRect = GUI.Window(0,windowRect,WindowFunction,"Instuctions");
@@ -12,6 +12,7 @@ public class dashBoard : MonoBehaviour
 
     void WindowFunction(int windowID){
       //place instructions here ...
+      GUI.Label(new Rect(25,25,150,150),"Drive: Arrow Keys \n\nTurn Turret: F, G\n\nElevation: up R down T\n\nShoot: spacebar");
     }
 
     // Start is called before the first frame update
