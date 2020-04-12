@@ -13,6 +13,7 @@ public class batiComputadora : MonoBehaviour {
 	public float waveWait;
 	public Text scoreBox;
 	public int Score;
+	//public dashBoard theDashBoard;
 
 	IEnumerator spawnWaves(){
 		yield return new WaitForSeconds (startWait);
@@ -27,15 +28,21 @@ public class batiComputadora : MonoBehaviour {
 		}
 	}
 
+	//void OnGUI(){
+		//Debug.Log("add component here");
+		//this.theDashBoard = new dashBoard();
+	//}
+
 	// Use this for initialization
 	void Start () {
 		StartCoroutine(spawnWaves ());
 		this.UpdateScore ();
+		//this.theDashBoard = GameObject.AddComponent<dashBoard> as dashBoard;
 	}
-	
+
 	// Update is called once per frame
 	void Update () {
-		
+
 	}
 
 	public void addScore(int scoreValue){
