@@ -28,11 +28,6 @@ public class batiComputadora : MonoBehaviour {
 		}
 	}
 
-	//void OnGUI(){
-		//Debug.Log("add component here");
-		//this.theDashBoard = new dashBoard();
-	//}
-
 	// Use this for initialization
 	void Start () {
 		StartCoroutine(spawnWaves ());

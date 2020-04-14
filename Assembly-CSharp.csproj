@@ -66,6 +66,7 @@
   <ItemGroup>
     <Compile Include="Assets\CerroGordo\Scripts\batiComputadora.cs" />
     <Compile Include="Assets\CerroGordo\Scripts\BulletTimer.cs" />
+    <Compile Include="Assets\CerroGordo\Scripts\cameraButtons.cs" />
     <Compile Include="Assets\CerroGordo\Scripts\dashBoard.cs" />
     <Compile Include="Assets\CerroGordo\Scripts\DestroyByBoundary.cs" />
     <Compile Include="Assets\CerroGordo\Scripts\destroyByBtrGunHit.cs" />
