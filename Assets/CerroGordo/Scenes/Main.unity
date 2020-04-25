@@ -1893,6 +1893,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d0f74efc027b4bc38139537541b96ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  btnSkin: {fileID: 11400000, guid: a8791a9663868492ba11d33e39d2435b, type: 2}
 --- !u!1 &919775750
 GameObject:
   m_ObjectHideFlags: 0

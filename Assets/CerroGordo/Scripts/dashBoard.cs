@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class dashBoard : MonoBehaviour
 {
-    private Rect windowRect = new Rect(20,20,200,150);
+    private Rect windowRect = new Rect(20,20,170,150);
 
     void OnGUI(){
       windowRect = GUI.Window(0,windowRect,WindowFunction,"Instuctions");
