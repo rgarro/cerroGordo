@@ -9,15 +9,18 @@ public class cameraButtons : MonoBehaviour
 
     public GUISkin btnSkin;
 
+    public Texture2D GunCamera2d;
+    public Texture2D RadarIcon;
+
     void OnGUI(){
       GUI.skin = this.btnSkin;
       GUI.Box(new Rect(this.buttons_x_corner,10,100,90), "Cameras");
-      if(GUI.Button(new Rect(this.buttons_x_corner+10,40,80,20), "Aerial"))
+      if(GUI.Button(new Rect(this.buttons_x_corner+10,40,40,40), GunCamera2d))
         {
             Debug.Log("add component here 111");
         }
     
-        if(GUI.Button(new Rect(this.buttons_x_corner+10,70,80,20), "Gun")) 
+        if(GUI.Button(new Rect(this.buttons_x_corner+55,40,40,40), RadarIcon)) 
         {
             Debug.Log("add component here 222");
         }	
