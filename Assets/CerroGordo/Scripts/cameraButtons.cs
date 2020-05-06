@@ -1,11 +1,27 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+/**
+ *         .-------------------.
+ *        /--"--.------.------/|
+ *        |Kodak|__Ll__| [==] ||
+ *        |     | .--. | """" ||
+ *        |     |( () )|      ||
+ *   jgs  |     | `--' |      |/
+ *        `-----'------'------'
+ *
+ *------------------------------------------------
+ * Karla Hernandez selfied next to an ICBM ...
+ *
+ *
+ * @author Rolando <rgarro@gmail.com>
+ */
 public class cameraButtons : MonoBehaviour
 {
-    protected bool gun_camera_is_hidden =  false;
-    protected bool radar_camera_is_hidden =  false;
+    protected bool gun_camera_is_hidden =  true;
+    protected bool radar_camera_is_hidden =  true;
+    
+    protected bool main_camera_is_hidden = false;
     protected int buttons_x_corner = 200;
 
     public GUISkin btnSkin;
@@ -13,6 +29,13 @@ public class cameraButtons : MonoBehaviour
     public Texture2D RadarIcon;
     public GameObject gun_camera;
     public GameObject radar_camera;
+    public GameObject main_camera;
+
+    void Start()
+    {
+        this.gun_camera.SetActive(false);
+        this.radar_camera.SetActive(false);
+    }
 
     void OnGUI(){
       GUI.skin = this.btnSkin;
@@ -39,12 +62,6 @@ public class cameraButtons : MonoBehaviour
             }
         }	
   	}
-
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
 
     // Update is called once per frame
     void Update()
