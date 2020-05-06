@@ -1894,9 +1894,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   btnSkin: {fileID: 11400000, guid: a8791a9663868492ba11d33e39d2435b, type: 2}
-  GunCamera2d: {fileID: 2800000, guid: a75a106c28bc7428e908eaac2230c582, type: 3}
+  GunCamera2d: {fileID: 2800000, guid: 64b6dd0478d634ddea8c9592e25ccda4, type: 3}
   RadarIcon: {fileID: 2800000, guid: 69bf2c4ed9b1747078854fb5251714c4, type: 3}
   RearViewIcon: {fileID: 2800000, guid: 60c1962ec1b8e4023b8bd39ec37955b9, type: 3}
+  MainCameraIcon: {fileID: 2800000, guid: ff60cf22894674354a39abb65210ab52, type: 3}
   gun_camera: {fileID: 476333718}
   radar_camera: {fileID: 1893774536}
   main_camera: {fileID: 1019686559}
@@ -1989,7 +1990,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &927028029
 Transform:
   m_ObjectHideFlags: 0
