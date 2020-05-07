@@ -49,9 +49,17 @@ public class cameraButtons : MonoBehaviour
             if(this.gun_camera_is_hidden){
                 this.gun_camera_is_hidden = false;
                 this.gun_camera.SetActive(true);
+
+                this.main_camera_is_hidden = true;
+                this.main_camera.SetActive(false);
+                this.radar_camera_is_hidden = true;
+                this.radar_camera.SetActive(false);
+                this.rearview_camera_is_hidden = true;
+                this.rearview_camera.SetActive(false);
             } else {
                 this.gun_camera_is_hidden = true;
                 this.gun_camera.SetActive(false);
+                this.main_camera.SetActive(true);
             }
         }
     
@@ -60,9 +68,18 @@ public class cameraButtons : MonoBehaviour
             if(this.radar_camera_is_hidden){
                 this.radar_camera_is_hidden = false;
                 this.radar_camera.SetActive(true);
+
+                this.gun_camera_is_hidden = true;
+                this.gun_camera.SetActive(false);
+
+                this.main_camera_is_hidden = true;
+                this.main_camera.SetActive(false);
+                this.rearview_camera_is_hidden = true;
+                this.rearview_camera.SetActive(false);
             } else {
                 this.radar_camera_is_hidden = true;
                 this.radar_camera.SetActive(false);
+                this.main_camera.SetActive(true);
             }
         }
 
@@ -71,21 +88,40 @@ public class cameraButtons : MonoBehaviour
             if(this.rearview_camera_is_hidden){
                 this.rearview_camera_is_hidden = false;
                 this.rearview_camera.SetActive(true);
+
+                this.radar_camera_is_hidden = true;
+                this.radar_camera.SetActive(false);
+
+                this.gun_camera_is_hidden = true;
+                this.gun_camera.SetActive(false);
+
+                this.main_camera_is_hidden = true;
+                this.main_camera.SetActive(false);
+               
             } else {
                 this.rearview_camera_is_hidden = true;
                 this.rearview_camera.SetActive(false);
+                this.main_camera.SetActive(true);
             }
         }
 
         if(GUI.Button(new Rect(this.buttons_x_corner+155,40,40,40), MainCameraIcon)) 
         {
-            if(this.main_camera_is_hidden){
+            
                 this.main_camera_is_hidden = false;
                 this.main_camera.SetActive(true);
-            } else {
-                this.main_camera_is_hidden = true;
-                this.main_camera.SetActive(false);
-            }
+
+                this.rearview_camera_is_hidden = true;
+                this.rearview_camera.SetActive(false);
+
+                this.radar_camera_is_hidden = true;
+                this.radar_camera.SetActive(false);
+
+                this.gun_camera_is_hidden = true;
+                this.gun_camera.SetActive(false);
+
+
+            
         }		
   	}
 

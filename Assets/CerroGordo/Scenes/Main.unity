@@ -1321,7 +1321,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &476333719
 Transform:
   m_ObjectHideFlags: 0
@@ -1378,16 +1378,16 @@ Camera:
   m_FocalLength: 50
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0.01
-    y: -0.02
-    width: 0.35
-    height: 0.28
+    x: 0
+    y: 0
+    width: 1
+    height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 67
+  field of view: 49.6
   orthographic: 0
   orthographic size: 5
-  m_Depth: 1
+  m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -1998,13 +1998,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 927028028}
-  m_LocalRotation: {x: 0.019476047, y: 0.951456, z: -0.30709684, w: 0.006613784}
-  m_LocalPosition: {x: -0.129, y: 4.098, z: 5.685}
+  m_LocalRotation: {x: 0.016628128, y: 0.99973583, z: -0.0102590965, w: 0.012106366}
+  m_LocalPosition: {x: -0.24, y: 2.7, z: 8.37}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 903124503}
   m_RootOrder: 12
-  m_LocalEulerAnglesHint: {x: 35.777, y: 179.95601, z: 2.331}
+  m_LocalEulerAnglesHint: {x: 1.1980001, y: 178.632, z: 1.891}
 --- !u!81 &927028030
 AudioListener:
   m_ObjectHideFlags: 0
@@ -2038,8 +2038,8 @@ Camera:
   m_GameObject: {fileID: 927028028}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.47307527, g: 0.6465362, b: 0.9191176, a: 0}
+  m_ClearFlags: 2
+  m_BackGroundColor: {r: 0.4745098, g: 0.64705884, b: 0.91764706, a: 0}
   m_projectionMatrixMode: 1
   m_SensorSize: {x: 36, y: 24}
   m_LensShift: {x: 0, y: 0}
@@ -2047,20 +2047,20 @@ Camera:
   m_FocalLength: 50
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0.67
-    y: -0.4
-    width: 0.35
-    height: 0.67
+    x: 0
+    y: 0
+    width: 1
+    height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 91
+  field of view: 49.6
   orthographic: 0
   orthographic size: 5
-  m_Depth: 0
+  m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_RenderingPath: 1
+  m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
   m_TargetEye: 3
@@ -2180,7 +2180,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1019686559}
   m_LocalRotation: {x: 0.12505057, y: 0.0018529785, z: -0.011150403, w: 0.99208605}
-  m_LocalPosition: {x: -0.2, y: 7.3, z: -14.6}
+  m_LocalPosition: {x: -0.202, y: 7.338, z: -14.796}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 903124503}
@@ -3454,7 +3454,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!81 &1893774537
 AudioListener:
   m_ObjectHideFlags: 0
@@ -3488,8 +3488,8 @@ Camera:
   m_GameObject: {fileID: 1893774536}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.47307527, g: 0.6465362, b: 0.9191176, a: 0}
+  m_ClearFlags: 2
+  m_BackGroundColor: {r: 0.4745098, g: 0.64705884, b: 0.91764706, a: 0}
   m_projectionMatrixMode: 1
   m_SensorSize: {x: 36, y: 24}
   m_LensShift: {x: 0, y: 0}
@@ -3497,24 +3497,24 @@ Camera:
   m_FocalLength: 50
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0.68
-    y: 0.76
-    width: 0.81
-    height: 1.63
-  near clip plane: 23.9
-  far clip plane: 1000.18
-  field of view: 76.6
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+  near clip plane: 0.3
+  far clip plane: 1000
+  field of view: 49.6
   orthographic: 0
   orthographic size: 5
-  m_Depth: 0
+  m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_RenderingPath: 3
+  m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
   m_TargetEye: 3
-  m_HDR: 0
+  m_HDR: 1
   m_AllowMSAA: 1
   m_AllowDynamicResolution: 0
   m_ForceIntoRT: 0
