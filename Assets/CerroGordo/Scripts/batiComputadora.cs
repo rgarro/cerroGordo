@@ -2,7 +2,20 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+/**
+ *      _..--""````""--.._
+ *    .'       |\/|       '.
+ *   /    /`._ |  | _.'\    \
+ *  ;    /              \    |
+ *  |   /                \   |
+ *  ;  / .-.          .-. \  ;
+ *   \ |/   \.-.  .-./   \| /
+ *    '._       \/       _.'
+ *       ''--..____..--''
+ *  December whispers are tragedy ...
+ * 
+ * @author Rolando <rgarro@gmail.com>
+ */
 public class batiComputadora : MonoBehaviour {
 
 	public GameObject hazard;
@@ -11,9 +24,13 @@ public class batiComputadora : MonoBehaviour {
 	public float spawnWait;
 	public float startWait;
 	public float waveWait;
-	public Text scoreBox;
+	//public Text scoreBox;
 	public int Score;
 	//public dashBoard theDashBoard;
+	protected string theScore;
+	public GUISkin btnSkin;
+
+	public Texture2D RestartIcon;
 
 	IEnumerator spawnWaves(){
 		yield return new WaitForSeconds (startWait);
@@ -40,13 +57,22 @@ public class batiComputadora : MonoBehaviour {
 
 	}
 
+	void OnGUI(){
+		GUI.Label(new Rect(410,10,150,20),this.theScore);
+
+		if (GUI.Button (new Rect (10,10, 100, 50), RestartIcon)) 
+        {
+            //print ("you clicked the icon");
+			this.doRestart();//Confirm Box Here
+        }
+	}
 	public void addScore(int scoreValue){
 		Score += scoreValue;
 		UpdateScore ();
 	}
 
 	void UpdateScore(){
-		this.scoreBox.text = Score  + " points";
+		this.theScore = Score  + " points";
 	}
 
 	public void doRestart(){
