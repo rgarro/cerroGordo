@@ -3,6 +3,10 @@ cerroGordo
 
 A Drivable Turret Shooter on a Unity3D Vehicle Controller ...
 
+Inspired by some Danto88 Veterans I met at *calle de la amargura* in the early 90's  
+
+https://es.wikipedia.org/wiki/Operaci%C3%B3n_Danto_88
+
 Drive At:
 https://emptyart.github.io/cerroGordo
 
