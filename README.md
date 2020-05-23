@@ -7,6 +7,8 @@ Inspired by some Danto88 Veterans I met at *calle de la amargura* in the early 9
 
 https://es.wikipedia.org/wiki/Operaci%C3%B3n_Danto_88
 
+https://www.youtube.com/watch?v=KPoDhh7KdqE
+
 Drive At:
 https://emptyart.github.io/cerroGordo
 
