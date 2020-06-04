@@ -15,4 +15,4 @@ https://emptyart.github.io/cerroGordo
 elCapi Music Loop:
 https://soundcloud.com/dorje-trolo/elcapi
 
-[![que no se resistieran, por que sino los mataban ... ](https://raw.githubusercontent.com/rgarro/cerroGordo/master/cerroshot.png)]
+[![que no se resistieran, por que sino los mataban ... ](https://raw.githubusercontent.com/rgarro/cerroGordo/e3eb7d02b28d64bd9edc3cd2c4285d0f7aa4b642/cerroshot.png)]
