@@ -12,7 +12,10 @@ using UnityEngine.UI;
  *   \ |/   \.-.  .-./   \| /
  *    '._       \/       _.'
  *       ''--..____..--''
- *  December whispers are tragedy ...
+ *    === The Bad Man 1941 ===
+ *  Bed Time For Bonzo Kings Of Row  ...
+ *  The REST of Me PayPal PUT GET 
+ *  Dont Shoot! Apache Tomcat Special 2.0 Queen of Montana
  * 
  * @author Rolando <rgarro@gmail.com>
  */
@@ -31,6 +34,9 @@ public class batiComputadora : MonoBehaviour {
 	public GUISkin btnSkin;
 
 	public Texture2D RestartIcon;
+	public Texture2D dashBoardPicIcon;
+	public float dbPicX = 600;
+	public float dbPicY = 10;
 
 	IEnumerator spawnWaves(){
 		yield return new WaitForSeconds (startWait);
@@ -60,10 +66,14 @@ public class batiComputadora : MonoBehaviour {
 	void OnGUI(){
 		GUI.Label(new Rect(410,10,150,20),this.theScore);
 
-		if (GUI.Button (new Rect (10,10, 100, 50), RestartIcon)) 
+		if (GUI.Button (new Rect (10,10, 100, 50), this.RestartIcon)) 
         {
             //print ("you clicked the icon");
 			this.doRestart();//Confirm Box Here
+        }
+		if (GUI.Button (new Rect (this.dbPicX,this.dbPicY, 140, 160), this.dashBoardPicIcon)) 
+        {
+            Debug.Log("jodido ...");
         }
 	}
 	public void addScore(int scoreValue){

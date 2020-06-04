@@ -69,6 +69,7 @@
      <Compile Include="Assets\CerroGordo\Scripts\sphereTurret\turretController.cs" />
      <Compile Include="Assets\CerroGordo\Scripts\t43cameraFolllowed\barrelElevator.cs" />
      <Compile Include="Assets\CerroGordo\Scripts\t43cameraFolllowed\turretRoller.cs" />
+     <Compile Include="Assets\CerroGordo\Scripts\theContrasAI.cs" />
      <Compile Include="Assets\CerroGordo\Scripts\vehicleSounds.cs" />
      <Compile Include="Assets\CerroGordo\Scripts\WheelDriveXP.cs" />
      <Compile Include="Assets\Scripts\CarSwitcher.cs" />

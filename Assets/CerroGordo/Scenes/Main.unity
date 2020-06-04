@@ -1295,6 +1295,9 @@ MonoBehaviour:
   Score: 0
   btnSkin: {fileID: 11400000, guid: 8e8cb9a5caacd4e3484fcd81a067d0a6, type: 2}
   RestartIcon: {fileID: 2800000, guid: 2cf5c8b44ae92488196ed461013d1201, type: 3}
+  dashBoardPicIcon: {fileID: 2800000, guid: 79f22e0082a874ccd863a340fa84c31e, type: 3}
+  dbPicX: 740
+  dbPicY: 600
 --- !u!114 &502072497
 MonoBehaviour:
   m_ObjectHideFlags: 0
