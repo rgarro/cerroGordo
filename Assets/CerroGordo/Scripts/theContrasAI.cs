@@ -27,6 +27,7 @@ public class theContrasAI : MonoBehaviour
 {
     public GameObject mm23Cannon;
     public GameObject k114Shturm;
+    public GameObject opposingEnemy;//monobehavior wont need delegates to find stuff
 
     private float depressionAngle;
     private float sideAngle;
