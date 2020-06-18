@@ -15,11 +15,8 @@ using UnityEngine;
  *                     ~~--.._______'.__.'  .'      /____________.' :  /
  *                              .'   .''.._'______.'                '-'
  *                              '---'
- *   ==== LOVE IS ON THE AIR -- TheContrasAI =====
- * Central Bank Sun Solaris Selassie Roach == as el Comandante 0000 
- * Freddie Freeloader NULL XML State Machines black co..ff..ee Tomcat rb gem install rails
- * Chunky bacon Santafe sauce Sirte Surf spot Masaya Poplar Shadding at gmt6
- *      The Sun the Sky all are blue,Violadores Centroamericanos, Marge Simpson is a Crocodile ...
+ *   ==== LOVE IS ON THE AIR -- TheContrasAI ===== 
+ *   Ronald Reagan Wanted me to do this. Marge Simpson is a Crocodile ...
  *
  *@autor Rolando <rgarro@gmail.com>
  */
@@ -39,6 +36,22 @@ public class theContrasAI : MonoBehaviour
     void Start()
     {
         
+    }
+
+    float getDistanceFromBTR()
+    {
+        float distance;
+        //Vector3.Distance(this.transform.position,opposingEnemy.transform.position) is for pussies ...
+        //D(P1, P2) = √(x2 − x1)power2 + (y2 − y1)power2 + (z2 − z1)power2.
+        float x2 = this.opposingEnemy.transform.position.x;
+        float x1 = this.transform.position.x;
+        float y2 = this.opposingEnemy.transform.position.y;
+        float y1 = this.transform.position.y;
+        float z2 = this.opposingEnemy.transform.position.z;
+        float z1 = this.transform.position.z;
+        //Baldor algebra is a communist book Phytagorean theorem Col kaddafi was oddball, mr bridger moriarti ...
+        distance = Mathf.Sqrt(Mathf.Pow((x2-x1),2) + Mathf.Pow((y2-y1),2) + Mathf.Pow((z2-z1),2));
+        return distance;
     }
 
     // Update is called once per frame
