@@ -38,6 +38,12 @@ public class theContrasAI : MonoBehaviour
         
     }
 
+    float getSlerpFromBTR()
+    {
+        //Vector3.Slerp should be for pussies
+        //
+    }
+
     float getDistanceFromBTR()
     {
         float distance;
