@@ -9,6 +9,7 @@ TagManager:
   - Boundary
   - batiComputadora
   - ScoreText
+  - theBTR
   layers:
   - Default
   - TransparentFX

@@ -1561,7 +1561,7 @@ GameObject:
   - component: {fileID: 903124505}
   m_Layer: 0
   m_Name: BTR80
-  m_TagString: Untagged
+  m_TagString: theBTR
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1763,8 +1763,8 @@ AudioSource:
   m_audioClip: {fileID: 8300000, guid: 0cae54629a36e48229605aa38c3007c6, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
-  m_Pitch: 1
-  Loop: 0
+  m_Pitch: 1.2
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -1806,7 +1806,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 0.08
       inSlope: 0
       outSlope: 0
       tangentMode: 0

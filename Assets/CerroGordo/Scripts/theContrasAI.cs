@@ -24,7 +24,7 @@ public class theContrasAI : MonoBehaviour
 {
     public GameObject mm23Cannon;
     public GameObject k114Shturm;
-    public GameObject opposingEnemy;//monobehavior wont need delegates to find stuff
+    private GameObject opposingEnemy;//monobehavior wont need delegates to find stuff
 
     private float depressionAngle;
     private float sideAngle;
@@ -35,7 +35,12 @@ public class theContrasAI : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        this.setOpposingEnemy();
+    }
+
+    private void setOpposingEnemy()
+    {
+        this.opposingEnemy = GameObject.FindWithTag("theBTR");
     }
 
     void lookAtBTR()
@@ -72,6 +77,7 @@ public class theContrasAI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        this.distanceFromBTR = this.getDistanceFromBTR();
+        Debug.Log(this.distanceFromBTR);
     }
 }
