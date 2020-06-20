@@ -38,12 +38,21 @@ public class theContrasAI : MonoBehaviour
         
     }
 
-    float getSlerpFromBTR()
+    void lookAtBTR()
     {
-        //Vector3.Slerp should be for pussies
-        //
+        //Vector3.lookAt
+        //Vector3.RotateTowards
+        /*
+        var lookPos = target.position - transform.position;
+   lookPos.y = 0;
+   var rotation = Quaternion.LookRotation(lookPos);
+   transform.rotation = Quaternion.Slerp(transform.rotation, rotation, Time.deltaTime * damping); 
+        */
     }
 
+    void shootRay(){
+
+    }
     float getDistanceFromBTR()
     {
         float distance;
