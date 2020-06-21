@@ -31,6 +31,7 @@ public class theContrasAI : MonoBehaviour
     public float ammoEffectiveDistance;
     public float rocketEffectiveDistance;
     private float distanceFromBTR;
+    public int mm23CannonDamping;
 
     // Start is called before the first frame update
     void Start()
@@ -43,20 +44,18 @@ public class theContrasAI : MonoBehaviour
         this.opposingEnemy = GameObject.FindWithTag("theBTR");
     }
 
-    void lookAtBTR()
+    void mm23CannonPointsAtBTR()
     {
         //Vector3.lookAt
         //Vector3.RotateTowards
-        /*
-        var lookPos = target.position - transform.position;
-   lookPos.y = 0;
-   var rotation = Quaternion.LookRotation(lookPos);
-   transform.rotation = Quaternion.Slerp(transform.rotation, rotation, Time.deltaTime * damping); 
-        */
+        var lookPos = this.opposingEnemy.transform.position - this.transform.position;
+         //lookPos.y = 0;
+        var rotation = Quaternion.LookRotation(lookPos);
+        this.mm23Cannon.transform.rotation = Quaternion.Slerp(transform.rotation, rotation, Time.deltaTime * this.mm23CannonDamping); 
     }
 
-    void shootRay(){
-
+    void m23CannonShootsRays(){
+        Debug.Log("shooting here");
     }
     float getDistanceFromBTR()
     {
@@ -69,7 +68,7 @@ public class theContrasAI : MonoBehaviour
         float y1 = this.transform.position.y;
         float z2 = this.opposingEnemy.transform.position.z;
         float z1 = this.transform.position.z;
-        //Baldor algebra is a communist book Phytagorean theorem Col kaddafi was oddball, mr bridger moriarti ...
+        //Baldor algebra is a communist book ...
         distance = Mathf.Sqrt(Mathf.Pow((x2-x1),2) + Mathf.Pow((y2-y1),2) + Mathf.Pow((z2-z1),2));
         return distance;
     }
@@ -78,6 +77,12 @@ public class theContrasAI : MonoBehaviour
     void Update()
     {
         this.distanceFromBTR = this.getDistanceFromBTR();
-        Debug.Log(this.distanceFromBTR);
+        if(this.distanceFromBTR < this.ammoEffectiveDistance){
+            Debug.Log("shit puppet is to pump water on dry ice to blow up stucked shit pipelines ....");
+            this.mm23CannonPointsAtBTR();
+            //
+            this.m23CannonShootsRays();//ojo figure out rays delay on update frame rate
+            //
+        }
     }
 }
