@@ -32,6 +32,8 @@ public class theContrasAI : MonoBehaviour
     public float rocketEffectiveDistance;
     private float distanceFromBTR;
     public int mm23CannonDamping;
+    private float nextFire = 0;
+    public float fireRate = 0.25f;
 
     // Start is called before the first frame update
     void Start()
@@ -78,11 +80,11 @@ public class theContrasAI : MonoBehaviour
     {
         this.distanceFromBTR = this.getDistanceFromBTR();
         if(this.distanceFromBTR < this.ammoEffectiveDistance){
-            Debug.Log("shit puppet is to pump water on dry ice to blow up stucked shit pipelines ....");
             this.mm23CannonPointsAtBTR();
-            //
-            this.m23CannonShootsRays();//ojo figure out rays delay on update frame rate
-            //
+            if(Time.time > this.nextFire){
+                this.nextFire = Time.time + this.fireRate;
+                this.m23CannonShootsRays();
+            }
         }
     }
 }
