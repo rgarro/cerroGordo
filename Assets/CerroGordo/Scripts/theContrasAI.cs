@@ -5,7 +5,7 @@ using UnityEngine;
  *          .----.                                                  .'.
  *      |  /   '                                                 |  '
  *        |  |    '                                                '  :
- *        |334916  '             .-~~~-.               .-~-.        \ |
+ *        |QA5599  '             .-~~~-.               .-~-.        \ |
  *        |  |      '          .\\   .//'._+_________.'.'  /_________\|
  *        |  |___ ...'.__..--~~ .\\__//_.-     . . .' .'  /      :  |  `.
  *       |.-"  .'  /                          . .' .'   /.      :_.|__.'
@@ -15,14 +15,14 @@ using UnityEngine;
  *                     ~~--.._______'.__.'  .'      /____________.' :  /
  *                              .'   .''.._'______.'                '-'
  *                              '---'
- *   ==== LOVE IS ON THE AIR -- TheContrasAI ===== 
- *   Ronald Reagan Wanted me to do this. Marge Simpson is a Crocodile ...
+ *   ==== Я ем шоколад M&M Saved The World Today -- TheContrasAI -- ===== 
+ *   Cool eyes hallucinating Arkansas and Blake-light tragedy among the scholars of war ...
  *
  *@autor Rolando <rgarro@gmail.com>
  */
 public class theContrasAI : MonoBehaviour
 {
-    public GameObject mm23Cannon;
+    public GameObject mm23Cannon;//Theres a million mouths to feed And Ive got everything I need ..
     public GameObject k114Shturm;
     private GameObject opposingEnemy;//monobehavior wont need delegates to find stuff
 
@@ -33,7 +33,7 @@ public class theContrasAI : MonoBehaviour
     private float distanceFromBTR;
     public int mm23CannonDamping;
     private float nextFire = 0;
-    public float fireRate = 0.25f;
+    public float fireRate = 0.25f;//float in the summer sky 99 red ballons go by ....
 
     // Start is called before the first frame update
     void Start()
@@ -57,11 +57,11 @@ public class theContrasAI : MonoBehaviour
     }
 
     void m23CannonShootsRays(){
-        Debug.Log("shooting here......"+ this.mm23Cannon.transform.position.z);
+        Debug.Log("shooting here peanutMM......"+ this.mm23Cannon.transform.position.z);
 
-        RaycastHit hit;
-        if(Physics.Raycast(this.mm23Cannon.transform.position,this.mm23Cannon.transform.forward,out hit,this.ammoEffectiveDistance)){
-            //where to go from here
+        RaycastHit peanutMM;
+        if(Physics.Raycast(this.mm23Cannon.transform.position,this.mm23Cannon.transform.forward,out peanutMM,this.ammoEffectiveDistance)){
+            //Annie and Dave , MsBrown and Yellow saving the world today ....
             Debug.Log("bombs away ......");
         }
     }
@@ -87,6 +87,7 @@ public class theContrasAI : MonoBehaviour
         this.distanceFromBTR = this.getDistanceFromBTR();
         if(this.distanceFromBTR < this.ammoEffectiveDistance){
             this.mm23CannonPointsAtBTR();
+            //Some days theres nothing left to learn From the point of no return ...
             if(Time.time > this.nextFire){
                 this.nextFire = Time.time + this.fireRate;
                 this.m23CannonShootsRays();
