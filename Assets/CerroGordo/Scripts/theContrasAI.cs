@@ -57,9 +57,10 @@ public class theContrasAI : MonoBehaviour
     }
 
     void m23CannonShootsRays(){
-        Debug.Log("shooting here......");
+        Debug.Log("shooting here......"+ this.mm23Cannon.transform.position.z);
+
         RaycastHit hit;
-        if(Physics.Raycast(this.transform.position,this.transform.forward,out hit,this.ammoEffectiveDistance)){
+        if(Physics.Raycast(this.mm23Cannon.transform.position,this.mm23Cannon.transform.forward,out hit,this.ammoEffectiveDistance)){
             //where to go from here
             Debug.Log("bombs away ......");
         }
