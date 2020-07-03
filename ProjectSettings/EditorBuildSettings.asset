@@ -4,7 +4,4 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes:
-  - enabled: 1
-    path: Assets/CerroGordo/Scenes/Main.unity
-    guid: 5a3089387256f4ae59c2486ed42a17b3
+  m_Scenes: []

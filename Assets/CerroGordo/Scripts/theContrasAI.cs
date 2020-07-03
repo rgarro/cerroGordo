@@ -34,7 +34,10 @@ public class theContrasAI : MonoBehaviour
     public int mm23CannonDamping;
     private float nextFire = 0;
     public float fireRate = 0.25f;//float in the summer sky 99 red ballons go by ....
-
+    public ParticleSystem muzzleFlash;
+    public GameObject impactEffect;
+    private AudioSource gunSound;
+	public AudioClip gunShot;
     // Start is called before the first frame update
     void Start()
     {

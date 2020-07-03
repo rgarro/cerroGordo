@@ -4,12 +4,7 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - gunPipe
-  - Turret
-  - Boundary
-  - batiComputadora
-  - ScoreText
-  - theBTR
+  - Shootable
   layers:
   - Default
   - TransparentFX
@@ -19,7 +14,7 @@ TagManager:
   - UI
   - 
   - 
-  - Car
+  - Lighting
   - 
   - 
   - 
