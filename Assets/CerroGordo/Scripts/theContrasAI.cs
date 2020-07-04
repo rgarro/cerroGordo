@@ -38,10 +38,13 @@ public class theContrasAI : MonoBehaviour
     public GameObject impactEffect;
     private AudioSource gunSound;
 	public AudioClip gunShot;
+    private LineRenderer laserLine;
+    private WaitForSeconds shotDuration = new WaitForSeconds(0.2f);
     // Start is called before the first frame update
     void Start()
     {
         this.setOpposingEnemy();
+        this.laserLine = GetComponent<LineRenderer>();
     }
 
     private void setOpposingEnemy()
@@ -53,7 +56,7 @@ public class theContrasAI : MonoBehaviour
     {
         //Vector3.lookAt
         //Vector3.RotateTowards
-        var lookPos = this.opposingEnemy.transform.position - this.transform.position;
+        var lookPos = this.opposingEnemy.transform.position - this.mm23Cannon.transform.position;
          //lookPos.y = 0;
         var rotation = Quaternion.LookRotation(lookPos);
         this.mm23Cannon.transform.rotation = Quaternion.Slerp(transform.rotation, rotation, Time.deltaTime * this.mm23CannonDamping); 
@@ -61,13 +64,26 @@ public class theContrasAI : MonoBehaviour
 
     void m23CannonShootsRays(){
         Debug.Log("shooting here peanutMM......"+ this.mm23Cannon.transform.position.z);
-
+        this.StartCoroutine(this.ShotEffect());
+        Vector3 rayOrigin = this.mm23Cannon.transform.position;
         RaycastHit peanutMM;
+        this.laserLine.SetPosition(0,this.mm23Cannon.transform.position);
         if(Physics.Raycast(this.mm23Cannon.transform.position,this.mm23Cannon.transform.forward,out peanutMM,this.ammoEffectiveDistance)){
             //Annie and Dave , MsBrown and Yellow saving the world today ....
+            this.laserLine.SetPosition(1,peanutMM.point);
             Debug.Log("bombs away ......");
+        }else{
+            this.laserLine.SetPosition(1,rayOrigin + (this.mm23Cannon.transform.forward * this.ammoEffectiveDistance));
         }
     }
+
+    private IEnumerator ShotEffect(){
+        //this.gunSound.Play();
+        this.laserLine.enabled = true;
+        yield return this.shotDuration;
+        this.laserLine.enabled = false;
+    }
+
     float getDistanceFromBTR()
     {
         float distance;
