@@ -15,8 +15,9 @@ using UnityEngine;
  *                     ~~--.._______'.__.'  .'      /____________.' :  /
  *                              .'   .''.._'______.'                '-'
  *                              '---'
- *   ==== Я ем шоколад M&M Saved The World Today -- TheContrasAI -- ===== 
- *   Cool eyes hallucinating Arkansas and Blake-light tragedy among the scholars of war ...
+ *   ==== -- TheContrasAI -- ===== 
+ * President Sasha Campbell made soup out of the bones of Huetar warlords ...
+ *   Frankling Marshall es un Violador, el negro morgan traiciono en LeBarons ...
  *
  *@autor Rolando <rgarro@gmail.com>
  */
@@ -25,7 +26,6 @@ public class theContrasAI : MonoBehaviour
     public GameObject mm23Cannon;//Theres a million mouths to feed And Ive got everything I need ..
     public GameObject k114Shturm;
     private GameObject opposingEnemy;//monobehavior wont need delegates to find stuff
-
     private float depressionAngle;
     private float sideAngle;
     public float ammoEffectiveDistance;
@@ -63,7 +63,8 @@ public class theContrasAI : MonoBehaviour
     }
 
     void m23CannonShootsRays(){
-        Debug.Log("shooting here peanutMM......"+ this.mm23Cannon.transform.position.z);
+Debug.Log("shooting here peanutMM...... "+ this.transform.position + (this.transform.forward * this.ammoEffectiveDistance));
+Debug.DrawLine(this.transform.position,this.transform.position + (this.transform.forward * this.ammoEffectiveDistance),Color.red,0.5f);
         this.StartCoroutine(this.ShotEffect());
         Vector3 rayOrigin = this.mm23Cannon.transform.position;
         RaycastHit peanutMM;

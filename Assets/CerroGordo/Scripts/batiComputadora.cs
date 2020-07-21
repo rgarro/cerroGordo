@@ -13,9 +13,6 @@ using UnityEngine.UI;
  *    '._       \/       _.'
  *       ''--..____..--''
  *    === The Bad Man 1941 ===
- *  Bed Time For Bonzo Kings Of Row  ...
- *  The REST of Me PayPal PUT GET 
- *  Dont Shoot! Apache Tomcat Special 2.0 Queen of Montana
  * 
  * @author Rolando <rgarro@gmail.com>
  */
@@ -66,12 +63,12 @@ public class batiComputadora : MonoBehaviour {
 	void OnGUI(){
 		GUI.Label(new Rect(410,10,150,20),this.theScore);
 
-		if (GUI.Button (new Rect (10,10, 100, 50), this.RestartIcon)) 
+		if (GUI.Button (new Rect (10,10, 50, 50), this.RestartIcon)) 
         {
             //print ("you clicked the icon");
 			this.doRestart();//Confirm Box Here
         }
-		if (GUI.Button (new Rect (this.dbPicX,this.dbPicY, 140, 160), this.dashBoardPicIcon)) 
+		if (GUI.Button (new Rect (this.dbPicX,this.dbPicY, 40, 60), this.dashBoardPicIcon)) 
         {
             Debug.Log("jodido ...");
         }
