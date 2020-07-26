@@ -1,0 +1,212 @@
+fileFormatVersion: 2
+guid: 19792d6f0629d47c1b7292ebb4eada1c
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: blade
+    100002: blade.001
+    100004: blade.002
+    100006: blade.003
+    100008: blade.004
+    100010: Camera
+    100012: Cylinder
+    100014: fuselage
+    100016: Lamp
+    100018: leftLandingGear
+    100020: leftRocketPipe
+    100022: m23Cannon
+    100024: mi28
+    100026: //RootNode
+    100028: nose
+    100030: rightleftLandingGear
+    100032: rightRocketPipe
+    100034: rotorMast
+    100036: Sphere
+    100038: tailBlade
+    100040: tailBlade.001
+    100042: tailRotor
+    100044: Torus
+    100046: Torus.001
+    400000: blade
+    400002: blade.001
+    400004: blade.002
+    400006: blade.003
+    400008: blade.004
+    400010: Camera
+    400012: Cylinder
+    400014: fuselage
+    400016: Lamp
+    400018: leftLandingGear
+    400020: leftRocketPipe
+    400022: m23Cannon
+    400024: //RootNode
+    400026: mi28
+    400028: nose
+    400030: rightleftLandingGear
+    400032: rightRocketPipe
+    400034: rotorMast
+    400036: Sphere
+    400038: tailBlade
+    400040: tailBlade.001
+    400042: tailRotor
+    400044: Torus
+    400046: Torus.001
+    2000000: Camera
+    2100000: No Name
+    2100002: bladeGray
+    2100004: blackTire
+    2100006: noseGreen
+    2100008: cammoMaterial
+    2300000: blade
+    2300002: blade.001
+    2300004: blade.002
+    2300006: blade.003
+    2300008: blade.004
+    2300010: Cylinder
+    2300012: fuselage
+    2300014: leftLandingGear
+    2300016: leftRocketPipe
+    2300018: m23Cannon
+    2300020: nose
+    2300022: rightleftLandingGear
+    2300024: rightRocketPipe
+    2300026: rotorMast
+    2300028: Sphere
+    2300030: tailBlade
+    2300032: tailBlade.001
+    2300034: tailRotor
+    2300036: Torus
+    2300038: Torus.001
+    3300000: blade
+    3300002: blade.001
+    3300004: blade.002
+    3300006: blade.003
+    3300008: blade.004
+    3300010: Cylinder
+    3300012: fuselage
+    3300014: leftLandingGear
+    3300016: leftRocketPipe
+    3300018: m23Cannon
+    3300020: nose
+    3300022: rightleftLandingGear
+    3300024: rightRocketPipe
+    3300026: rotorMast
+    3300028: Sphere
+    3300030: tailBlade
+    3300032: tailBlade.001
+    3300034: tailRotor
+    3300036: Torus
+    3300038: Torus.001
+    4300000: rightRocketPipe
+    4300002: leftRocketPipe
+    4300004: tailRotor
+    4300006: tailBlade.001
+    4300008: tailBlade
+    4300010: rightleftLandingGear
+    4300012: Torus.001
+    4300014: leftLandingGear
+    4300016: Torus
+    4300018: m23Cannon
+    4300020: rotorMast
+    4300022: Sphere
+    4300024: blade.004
+    4300026: blade.003
+    4300028: blade.002
+    4300030: blade.001
+    4300032: blade
+    4300034: Cylinder
+    4300036: nose
+    4300038: fuselage
+    7400000: tailRotor|rotorMastAction.001
+    7400002: tailRotor|tailRotorAction
+    7400004: rotorMast|rotorMastAction.001
+    7400006: rotorMast|tailRotorAction
+    9500000: //RootNode
+    10800000: Lamp
+    2186277476908879412: ImportLogs
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 0
+    importLights: 0
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 0.01
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
