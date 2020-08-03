@@ -1581,7 +1581,7 @@ MonoBehaviour:
   maxAngle: 30
   maxTorque: 300
   brakeTorque: 30000
-  wheelShape: {fileID: 0}
+  wheelShape: {fileID: 351616126}
   criticalSpeed: 5
   stepsBelow: 5
   stepsAbove: 1
