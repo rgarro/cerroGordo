@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine;
 using UnityEngine.UI;
 /**
  *      _..--""````""--.._
@@ -13,12 +14,13 @@ using UnityEngine.UI;
  *    '._       \/       _.'
  *       ''--..____..--''
  *    === The Bad Man 1941 ===
- * 
+ *
  * @author Rolando <rgarro@gmail.com>
  */
 public class batiComputadora : MonoBehaviour {
 
 	public GameObject hazard;
+	public GameObject hazardB;
 	public Vector3 spawnValues;
 	public int hazardCount;
 	public float spawnWait;
@@ -34,6 +36,7 @@ public class batiComputadora : MonoBehaviour {
 	public Texture2D dashBoardPicIcon;
 	public float dbPicX = 600;
 	public float dbPicY = 10;
+	public int count = 0;
 
 	IEnumerator spawnWaves(){
 		yield return new WaitForSeconds (startWait);
@@ -41,7 +44,12 @@ public class batiComputadora : MonoBehaviour {
 			for (int i = 0; i < hazardCount; i++) {
 				Vector3 spawnPosition = new Vector3 (Random.Range (-spawnValues.x, spawnValues.x), spawnValues.y, spawnValues.z);
 				Quaternion spawnRotation = Quaternion.identity;
-				Instantiate (hazard, spawnPosition, spawnRotation);
+				if(this.count%2 == 0){
+					Instantiate (hazard, spawnPosition, spawnRotation);
+				}else{
+					Instantiate (hazardB, spawnPosition, spawnRotation);
+				}
+				this.count = this.count + 1;
 				yield return new WaitForSeconds (spawnWait);
 			}
 			yield return new WaitForSeconds (waveWait);
@@ -63,12 +71,12 @@ public class batiComputadora : MonoBehaviour {
 	void OnGUI(){
 		GUI.Label(new Rect(410,10,150,20),this.theScore);
 
-		if (GUI.Button (new Rect (10,10, 50, 50), this.RestartIcon)) 
+		if (GUI.Button (new Rect (10,10, 50, 50), this.RestartIcon))
         {
             //print ("you clicked the icon");
 			this.doRestart();//Confirm Box Here
         }
-		if (GUI.Button (new Rect (this.dbPicX,this.dbPicY, 40, 60), this.dashBoardPicIcon)) 
+		if (GUI.Button (new Rect (this.dbPicX,this.dbPicY, 40, 60), this.dashBoardPicIcon))
         {
             Debug.Log("jodido ...");
         }

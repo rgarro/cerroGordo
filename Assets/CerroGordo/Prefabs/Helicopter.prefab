@@ -236,6 +236,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotationSteps: 13.71
+  is_z: 0
 --- !u!1 &1048254907569694
 GameObject:
   m_ObjectHideFlags: 0
