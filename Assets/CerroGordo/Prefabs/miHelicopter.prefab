@@ -148,6 +148,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Blast: {fileID: 100012, guid: ee985001aaf7d45f28dce31c7bf86ca0, type: 3}
   scoreValue: 10
+  stallingTime: 1.18
 --- !u!114 &5655446288805748794
 MonoBehaviour:
   m_ObjectHideFlags: 0
