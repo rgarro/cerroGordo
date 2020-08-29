@@ -1,12 +1,25 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+/**
+ *                               \         .  ./
+ *                            \      .:";'.:.."   /
+ *                                (M^^.^~~:.'").
+ *                          -   (/  .    . . \ \)  -
+ *   O                         ((| :. ~ ^  :. .|))
+ *  |\\                     -   (\- |  \ /  |  /)  -
+ *  |  T                         -\  \     /  /-
+ * / \[_]..........................\  \   /  /
+ * triger object lost of altitude and final explotion
+ *
+ *@author Rolando<rgarro@gmail.com>
+ */
 public class destroyByBtrGunHit : MonoBehaviour {
 
 	public GameObject Blast;
 	public int scoreValue;
 
+	public float stallingTime = 0.8f;
 	void OnTriggerEnter(Collider other) {
 		//Debug.Log ("tome chichiii...");
 		if (other.tag == "Boundary") {
