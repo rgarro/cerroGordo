@@ -19,6 +19,11 @@ public class destroyByBtrGunHit : MonoBehaviour {
 	public GameObject Blast;
 	public int scoreValue = 10;
 	public float stallingTime = 0.8f;
+	public GameObject stallingSmoke;
+
+	void Start(){
+		this.stallingSmoke.SetActive(false);
+	}
 
 	void OnTriggerEnter(Collider other) {
 		//Debug.Log ("tome chichiii...");
@@ -38,6 +43,7 @@ public class destroyByBtrGunHit : MonoBehaviour {
 	}
 
 	private void startFalling(){
+		this.stallingSmoke.SetActive(true);
 		Rigidbody rb = GetComponent<Rigidbody>();
 		rb.useGravity = true;
 	}
