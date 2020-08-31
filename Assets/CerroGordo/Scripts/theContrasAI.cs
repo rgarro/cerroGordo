@@ -16,7 +16,6 @@ using UnityEngine;
  *                              .'   .''.._'______.'                '-'
  *                              '---'
  *   ==== -- TheContrasAI -- ===== 
- * President Sasha Campbell made soup out of the bones of Huetar warlords ...
  *   Frankling Marshall es un Violador, el negro morgan traiciono en LeBarons ...
  *
  *@autor Rolando <rgarro@gmail.com>

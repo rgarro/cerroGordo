@@ -18,7 +18,7 @@ public class destroyByBtrGunHit : MonoBehaviour {
 
 	public GameObject Blast;
 	public int scoreValue = 10;
-	public float stallingTime = 0.8f;
+	public float stallingTime = 1.8f;
 	public GameObject stallingSmoke;
 
 	void Start(){
@@ -31,13 +31,10 @@ public class destroyByBtrGunHit : MonoBehaviour {
 			return;
 		}
 		GameObject bt = GameObject.FindGameObjectWithTag ("batiComputadora");
-		//Debug.Log (bt);
 		batiComputadora mu = bt.GetComponent<batiComputadora> ();
 		mu.addScore(scoreValue);
-		//Instantiate (Blast,this.transform.position,this.transform.rotation);
 		this.showBlast();
 		Destroy(other.gameObject);
-		//Destroy(gameObject);
 		this.startFalling();
 		Invoke("afterStall",this.stallingTime);
 	}
