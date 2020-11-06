@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028334, g: 0.22571336, b: 0.3069219, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028355, g: 0.22571374, b: 0.30692255, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1297,7 +1297,7 @@ MonoBehaviour:
   btnSkin: {fileID: 11400000, guid: 8e8cb9a5caacd4e3484fcd81a067d0a6, type: 2}
   RestartIcon: {fileID: 2800000, guid: 2cf5c8b44ae92488196ed461013d1201, type: 3}
   dashBoardPicIcon: {fileID: 2800000, guid: 79f22e0082a874ccd863a340fa84c31e, type: 3}
-  dbPicX: 150
+  dbPicX: 130
   dbPicY: 3
   count: 0
 --- !u!114 &502072497

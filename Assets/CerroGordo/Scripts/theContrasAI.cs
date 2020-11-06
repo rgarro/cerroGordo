@@ -16,15 +16,14 @@ using UnityEngine;
  *                              .'   .''.._'______.'                '-'
  *                              '---'
  *   ==== -- TheContrasAI -- ===== 
- *   Frankling Marshall es un Violador, el negro morgan traiciono en LeBarons ...
  *
  *@autor Rolando <rgarro@gmail.com>
  */
 public class theContrasAI : MonoBehaviour
 {
-    public GameObject mm23Cannon;//Theres a million mouths to feed And Ive got everything I need ..
+    public GameObject mm23Cannon;
     public GameObject k114Shturm;
-    private GameObject opposingEnemy;//monobehavior wont need delegates to find stuff
+    private GameObject opposingEnemy;
     private float depressionAngle;
     private float sideAngle;
     public float ammoEffectiveDistance;
