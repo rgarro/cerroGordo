@@ -1253,6 +1253,7 @@ GameObject:
   - component: {fileID: 502072495}
   - component: {fileID: 502072496}
   - component: {fileID: 502072497}
+  - component: {fileID: 502072498}
   m_Layer: 0
   m_Name: batiComputadora
   m_TagString: batiComputadora
@@ -1310,6 +1311,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3c19af3655e8645d0a8b5455bda91df4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &502072498
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 502072494}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 648a0f0d7eb85b348b4ec1b4063ebbc3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &652742499

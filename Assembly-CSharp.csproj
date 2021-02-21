@@ -53,6 +53,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\CerroGordo\Scripts\autoRestart.cs" />
      <Compile Include="Assets\CerroGordo\Scripts\batiComputadora.cs" />
      <Compile Include="Assets\CerroGordo\Scripts\BulletTimer.cs" />
      <Compile Include="Assets\CerroGordo\Scripts\cameraButtons.cs" />
