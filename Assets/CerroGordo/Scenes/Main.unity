@@ -1325,6 +1325,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 648a0f0d7eb85b348b4ec1b4063ebbc3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  vehicle: {fileID: 903124497}
+  minPosY: -10
 --- !u!1 &652742499
 GameObject:
   m_ObjectHideFlags: 0

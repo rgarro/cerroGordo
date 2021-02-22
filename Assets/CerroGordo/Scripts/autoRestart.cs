@@ -21,7 +21,7 @@ public class autoRestart : MonoBehaviour
 {
 
     public GameObject vehicle;
-    public float minPosY;
+    public float minPosY = -10;
 
     private
     // Start is called before the first frame update
@@ -33,7 +33,9 @@ public class autoRestart : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if(this.vehicle.transform.position.y < this.minPosY){
+            this.doRestart();
+        }
     }
 
     public void doRestart(){
