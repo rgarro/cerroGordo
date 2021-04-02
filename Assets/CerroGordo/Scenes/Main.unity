@@ -1500,7 +1500,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff3b7fc186acd469eb1e5803572348bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxAngle: 30
+  maxAngle: 35
   maxTorque: 300
   brakeTorque: 30000
   wheelShape: {fileID: 351616126}
