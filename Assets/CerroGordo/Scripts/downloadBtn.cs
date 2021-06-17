@@ -47,6 +47,7 @@ public class downloadBtn : MonoBehaviour
     }
 
     public void doDownload(){
-        Debug.Log("will download");
+        //Debug.Log("will download");
+        Application.OpenURL(this.downloadUrl);
     }
 }
