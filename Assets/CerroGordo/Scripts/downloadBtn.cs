@@ -18,16 +18,35 @@ using UnityEngine;
  */
 public class downloadBtn : MonoBehaviour
 {
+    public Texture2D DownloadIcon;
+    public float IconX = 10;
+    public float IconY = 10;
+    public float IconWidth = 128;
+    public float IconHeight = 128;
+
+    public string downloadUrl = "https://matterporttest-f4387.firebaseapp.com/TheGospelOfLuke.zip";
+
     // Start is called before the first frame update
     void Start()
     {
-        //https://matterporttest-f4387.firebaseapp.com/TheGospelOfLuke.zip
         
+    }
+
+    void OnGUI(){
+        if(GUI.Button(new Rect (this.IconX,this.IconY,this.IconWidth,this.IconHeight),this.DownloadIcon)) 
+        {
+            //print ("you clicked the icon");
+            this.doDownload();
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
         
+    }
+
+    public void doDownload(){
+        Debug.Log("will download");
     }
 }
