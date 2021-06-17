@@ -61,6 +61,7 @@
      <Compile Include="Assets\CerroGordo\Scripts\DestroyByBoundary.cs" />
      <Compile Include="Assets\CerroGordo\Scripts\destroyByBtrGunHit.cs" />
      <Compile Include="Assets\CerroGordo\Scripts\DestroyByTime.cs" />
+     <Compile Include="Assets\CerroGordo\Scripts\downloadBtn.cs" />
      <Compile Include="Assets\CerroGordo\Scripts\eulerGunController.cs" />
      <Compile Include="Assets\CerroGordo\Scripts\gameController.cs" />
      <Compile Include="Assets\CerroGordo\Scripts\gunLoader.cs" />
