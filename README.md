@@ -8,16 +8,13 @@ Click The Weed Button Download *The Gospel of Luke*
 
 https://es.wikipedia.org/wiki/Operaci%C3%B3n_Danto_88
 
-https://www.youtube.com/watch?v=KPoDhh7KdqE
-
 Drive At:
-http://cerrogordo.s3-website.eu-west-2.amazonaws.com
-
-https://play.unity.com/mg/other/cerrogordo
+https://play.unity.com/mg/other/cerro-gordo-pre-1-1
 
 elCapi Music Loop:
 https://soundcloud.com/dorje-trolo/elcapi
 
 Looking for sponsors ...
+Buy Me a Beer, Starbucks Expresso or send a cheese burguer ... [Paypal](https://www.paypal.me/gospelOfLuke/25).
 
 [![que no se resistieran, por que sino los mataban ... ](https://raw.githubusercontent.com/rgarro/cerroGordo/master/cerroshot.png)]
