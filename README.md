@@ -3,10 +3,9 @@ cerroGordo
 
 A Drivable Turret Shooter on a Unity3D Vehicle Controller ...
 
-Inspired by some Danto88 Veterans I met at *calle de la amargura* in the early 90's  
-Click The Weed Button Download *The Gospel of Luke* 
+Producing kitesurfing for a Nicaraguan girl in Masaya ,hidding asper bothrops snakes to produce the wind. Moreno Cañas was an aussie aborigine, she told me once while drinking beers with some Danto88 veterans . Daniel Ortega will legalize cannabis, Masaya beaches will be like Gerroa or Mandurah. Vanilla Ice is a Sandinista..
 
-https://es.wikipedia.org/wiki/Operaci%C3%B3n_Danto_88
+Click The Weed Button Download *The Gospel of Luke* 
 
 Drive At:
 https://play.unity.com/mg/other/cerro-gordo-pre-1-1
