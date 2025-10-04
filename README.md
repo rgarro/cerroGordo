@@ -10,10 +10,11 @@ Click The Weed Button Download *The Gospel of Luke*
 Drive At:
 https://play.unity.com/mg/other/cerro-gordo-pre-1-1
 
-elCapi Music Loop:
+elKπ Music Loop:
 https://soundcloud.com/dorje-trolo/elcapi
 
-Looking for sponsors ...
-Buy Me a Beer, Starbucks Expresso or send a cheese burguer ... [Paypal](https://www.paypal.me/gospelOfLuke/25).
+Did you like it? send me funds,help me to pay my MIT major ... [Paypal](https://www.paypal.me/gospelOfLuke/25).
 
-[![que no se resistieran, por que sino los mataban ... ](https://raw.githubusercontent.com/rgarro/cerroGordo/master/cerroshot.png)]
+[![mondongui murio de covid ... ](https://raw.githubusercontent.com/rgarro/cerroGordo/master/cerroshot.png)]
+
+[![mondongui murio de covid ... ](https://raw.githubusercontent.com/rgarro/cerroGordo/master/tartan.PNG)]
